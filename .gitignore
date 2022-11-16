@@ -83,3 +83,4 @@ Thumbs.db
 
 ### Blender backups
 *.blend[0-9]
+*.blend[0-9].meta
