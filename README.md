@@ -26,3 +26,5 @@ Based off of https://github.com/jsking2920/60419-Space<br>
 	(https://skfb.ly/6UCBI) by Glitch5970 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 - "Old amp" model <br> 
 	(https://skfb.ly/onSEH) by pibanezl is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+- "RCA 44-BX Microphone" model <br>
+	(https://skfb.ly/6AKHx) by Tom Seddon is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
