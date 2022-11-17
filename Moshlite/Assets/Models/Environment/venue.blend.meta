@@ -14,6 +14,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Walls
     second: {fileID: 2100000, guid: deffbaf9331461f4f92a4a03ebe3bca3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stairs_INSIDE
+    second: {fileID: 2100000, guid: 10a8562681414974c8600b4c1bd01adf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: walls_INSIDE
+    second: {fileID: 2100000, guid: f69dfc99671b04a4caf9fc7d5c8e2ef5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

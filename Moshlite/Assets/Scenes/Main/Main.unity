@@ -192,6 +192,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: deffbaf9331461f4f92a4a03ebe3bca3, type: 2}
+    - target: {fileID: -3584497630037689987, guid: fbd42c0ad16dcbb43971c4a94354a3e7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: f69dfc99671b04a4caf9fc7d5c8e2ef5, type: 2}
     - target: {fileID: -316330922158448428, guid: fbd42c0ad16dcbb43971c4a94354a3e7,
         type: 3}
       propertyPath: m_IsActive
@@ -217,6 +222,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f69dfc99671b04a4caf9fc7d5c8e2ef5, type: 2}
+    - target: {fileID: 1627905385673821470, guid: fbd42c0ad16dcbb43971c4a94354a3e7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 10a8562681414974c8600b4c1bd01adf, type: 2}
     - target: {fileID: 3594243245622329198, guid: fbd42c0ad16dcbb43971c4a94354a3e7,
         type: 3}
       propertyPath: m_StaticEditorFlags
