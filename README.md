@@ -12,3 +12,13 @@ Based off of https://github.com/jsking2920/60419-Space<br>
 	bu relies on RtMidi, which is licensed under an MIT-style license (https://github.com/keijiro/jp.keijiro.rtmidi/blob/master/LICENSE)
 - "Blender Stairs" Blender add-on used to create stairs <br> 
 	(https://github.com/blackears/blenderStairs) by blackears
+- "OCD (One Click Damage)" blender add-on <br>
+	(https://blendermarket.com/products/ocd) by vfxguide, purchased license for personal and commercial use 
+- "Concrete" textures <br>
+	(https://polyhaven.com/a/concrete) by Rob Tuytel is licensed under Creative Commons 0
+- "Brushed Concrete" textures <br>
+	(https://polyhaven.com/a/brushed_concrete) by Dario Barresi and Dimitrios Savva is licensed under Creative Commons 0
+- "Concrete Floor 02" textures <br>
+	(https://polyhaven.com/a/concrete_floor_02) by Rob Tuytel is licensed under Creative Commons 0
+- "Concrete Wall 006" textures <br>
+	(https://polyhaven.com/a/concrete_wall_006) by Charlotte Baglioni and Dario Barresi is licensed under Creative Commons 0
