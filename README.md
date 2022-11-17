@@ -22,3 +22,7 @@ Based off of https://github.com/jsking2920/60419-Space<br>
 	(https://polyhaven.com/a/concrete_floor_02) by Rob Tuytel is licensed under Creative Commons 0
 - "Concrete Wall 006" textures <br>
 	(https://polyhaven.com/a/concrete_wall_006) by Charlotte Baglioni and Dario Barresi is licensed under Creative Commons 0
+- "FNaF | Loud Speaker" model <br>
+	(https://skfb.ly/6UCBI) by Glitch5970 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+- "Old amp" model <br> 
+	(https://skfb.ly/onSEH) by pibanezl is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
