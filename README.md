@@ -30,3 +30,7 @@ Based off of https://github.com/jsking2920/60419-Space<br>
 	(https://skfb.ly/onSEH) by pibanezl is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 - "RCA 44-BX Microphone" model <br>
 	(https://skfb.ly/6AKHx) by Tom Seddon is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+- "Garbage heep" model <br>
+	(https://www.cgtrader.com/free-3d-models/exterior/street-exterior/garbage-heep) by djkorg is licensed under a royalty free license
+- "Trash Soda Cans and Tins" model <br>
+	(https://www.cgtrader.com/free-3d-models/food/beverage/trash-soda-cans-and-tins) by jon-knutton
