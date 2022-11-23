@@ -40,3 +40,5 @@ Based off of https://github.com/jsking2920/60419-Space<br>
 	(https://skfb.ly/Kzvy) by anathlyst is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 - "Worn out vintage Fender Stratocaster guitar" model <br>
 	(https://skfb.ly/oxXZU) by kiksart is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+- "Guitar Pedal" model <br> 
+	(https://skfb.ly/6sJqZ) by Pau is licensed under CC Attribution-NonCommercial-NoDerivs (http://creativecommons.org/licenses/by-nc-nd/4.0/).
