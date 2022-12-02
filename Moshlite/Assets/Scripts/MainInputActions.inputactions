@@ -1,0 +1,651 @@
+{
+    "name": "MainInputActions",
+    "maps": [
+        {
+            "name": "DrumMap",
+            "id": "2d231e2a-3b34-40ca-b067-a81c7ac904c9",
+            "actions": [
+                {
+                    "name": "Kick",
+                    "type": "Button",
+                    "id": "3e25d9dc-254a-4842-923f-8d35098ea09e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Snare",
+                    "type": "Button",
+                    "id": "25fe44ac-0098-4009-b1e2-6c39cb42e0af",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SnareRim",
+                    "type": "Button",
+                    "id": "45835bcf-3fe3-4d99-9af5-1af09d0bf163",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HiHatOpenBow",
+                    "type": "Button",
+                    "id": "b9664d7e-00b1-413b-b09f-ccccae2f6200",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HiHatOpenEdge",
+                    "type": "Button",
+                    "id": "a6c1fe46-2405-4d51-a4ab-30b14d2d8145",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HiHatClosedBow",
+                    "type": "Button",
+                    "id": "ce741b92-5493-4be8-b21c-fcc533a12245",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HiHatPedal",
+                    "type": "Button",
+                    "id": "8b1be5dc-4dc7-4c6e-ae7a-37601fc0c3d7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftCrashBow",
+                    "type": "Button",
+                    "id": "3cf9468d-d219-4c99-af58-46756e4a8db9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftCrashEdge",
+                    "type": "Button",
+                    "id": "9521e775-c316-41da-acc3-2016b013afd8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightCrashBow",
+                    "type": "Button",
+                    "id": "5f527f36-8c00-412e-9da6-406f07505ee9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RightCrashEdge",
+                    "type": "Button",
+                    "id": "ebdcbb23-fbbc-4d8b-9758-edbef415e9b7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RideBow",
+                    "type": "Button",
+                    "id": "4efe47f0-e592-4fcf-802f-57b544cfc17d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RideEdge",
+                    "type": "Button",
+                    "id": "6e467f31-45d8-4feb-83ce-c5157460069e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RideBell",
+                    "type": "Button",
+                    "id": "cd22529a-b7e4-4a9d-a56d-70fc08a3f192",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Tom1",
+                    "type": "Button",
+                    "id": "1d8499ff-d755-4794-a197-406b55f159ab",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Tom1Rim",
+                    "type": "Button",
+                    "id": "87272334-ae68-44ae-9726-3993c83eea8d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Tom2",
+                    "type": "Button",
+                    "id": "1aa10555-717b-4cb1-a094-ee2723f97dd6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Tom2Rim",
+                    "type": "Button",
+                    "id": "ed04afad-e3ae-4734-a511-7bba3e046934",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Tom3",
+                    "type": "Button",
+                    "id": "5f3f001d-b621-42b2-a66f-b0cbc2fb02de",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Tom3Rim",
+                    "type": "Button",
+                    "id": "fe97a403-8e68-4737-a836-970aac4b455c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "56dc5370-f1af-4265-b86a-9e3d2577cda7",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Kick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "22c3bf21-1c11-49e2-a41e-db4ccd730417",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Kick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0f6992cd-ae1c-4ded-befb-642ecad3059a",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Snare",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e3613d5c-d297-48c4-8de7-4b47c8b1f3e4",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Snare",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ae25077b-5786-4569-b58c-dfe0102dddca",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "SnareRim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "de6b46b8-d279-4a7e-bd17-3f8e8706b47a",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "SnareRim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2f673e8c-2ba1-49ad-9274-9dce9522573a",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "HiHatOpenBow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "92f6d379-a141-4d40-88e0-8ae8be273c75",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "HiHatOpenBow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "863575c1-ba7e-4f46-b3de-0d9ee5792dcf",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "HiHatOpenEdge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2bf1e42c-5a89-4b57-a4e4-b72ed30356d5",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "HiHatOpenEdge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e5e0c413-c6e3-4138-8adf-b52ff6ce4cc2",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "HiHatClosedBow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fb2602e8-0163-4e42-8a1e-8d8835383040",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "HiHatClosedBow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3e968108-c70c-444d-925f-206b9701cf04",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "HiHatPedal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8ac0fa41-3bd9-4ada-b6d6-db19b78047c4",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "HiHatPedal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1c66ef10-6123-40ca-a616-563b65b2136e",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "LeftCrashBow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d2334210-ed0f-4381-9377-82fb1e2dfd05",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "LeftCrashBow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "be92d4c2-2772-4dab-bba2-314cf92e7e20",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "LeftCrashEdge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b481c4df-132e-43f0-aa7c-b99f25da8166",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "LeftCrashEdge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "da8e4249-94c3-4ab1-8fea-64bfac96552b",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "RightCrashBow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ebdec6da-9cf6-429b-afe1-bce7d08a6e9d",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "RightCrashBow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "038cefa1-96db-41a3-8faa-c5c030eb891f",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "RightCrashEdge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fbc8437b-0e04-461a-8e81-34f852ad133c",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "RightCrashEdge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1dbe4b24-8a23-4d23-8ef2-1229fccd46ac",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "RideBow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "456672c1-6de3-4d4b-8b43-cc4f923a406f",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "RideBow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "64d8eff1-666f-4592-9094-f5937b2f56bf",
+                    "path": "<Keyboard>/u",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "RideEdge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b0cddb01-e7bf-468f-9a32-1532930e3528",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "RideEdge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2111a9c8-c8e3-4dcb-b776-5b62444792d1",
+                    "path": "<Keyboard>/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "RideBell",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e2d945ee-ce66-4be2-a6eb-1ceb3ed5677a",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "RideBell",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "635543df-c41a-43c2-9d93-aea307d7b18f",
+                    "path": "<Keyboard>/g",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Tom1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83b3d299-f0f6-4f5a-bc6a-8e94b5ef3fdb",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Tom1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "46e41720-6876-4bc6-be6e-5c42ca5c3c11",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Tom1Rim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "206b82c8-46ef-45e4-b6fd-bf596dad8a1e",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Tom1Rim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "22c45a56-b1c8-44cd-b872-606f96c9f8f1",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Tom2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "308f0cf6-864e-4bbc-bcc0-e85acf909211",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Tom2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8fc36c0a-464b-4937-878a-09d02ebaaa5f",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Tom2Rim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c17ff38d-5276-4697-83f4-042516fa0a24",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Tom2Rim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a2d1213-b40f-4af2-9fa2-e273568e2c31",
+                    "path": "<Keyboard>/n",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Tom3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eca5049c-cc31-4ced-9677-0c2dc092047d",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Tom3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "af45ee00-361c-4846-8862-714cfcb7a455",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Tom3Rim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2b0be259-24e1-4e5b-84c2-6c142558d1f1",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "DrumScheme",
+                    "action": "Tom3Rim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "DrumScheme",
+            "bindingGroup": "DrumScheme",
+            "devices": [
+                {
+                    "devicePath": "<MidiDevice>",
+                    "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
