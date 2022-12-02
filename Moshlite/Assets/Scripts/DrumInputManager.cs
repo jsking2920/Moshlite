@@ -10,10 +10,10 @@ public class DrumInputManager : MonoBehaviour
 {
     public bool debugMode = false;
 
-    //[SerializeField] private CharacterManager _characterManager;
-    //[SerializeField] private vfxManager _vfxManager;
-    //[SerializeField] private CameraManager _cameraManager;
-    //[SerializeField] private LightingManager _lightingManager;
+    [SerializeField] private CharacterManager _characterManager;
+    [SerializeField] private vfxManager _vfxManager;
+    [SerializeField] private CameraManager _cameraManager;
+    [SerializeField] private LightingManager _lightingManager;
 
     enum Preset { main, breakdown };
     private Preset _curPreset = Preset.main;
