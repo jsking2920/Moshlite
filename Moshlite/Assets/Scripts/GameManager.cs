@@ -9,11 +9,11 @@ public class GameManager : MonoBehaviour
 {
     [Header("Audio")]
     [SerializeField] private List<Song> songs = new List<Song>();
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
 
     [Header("UI")]
     [SerializeField] private GameObject titlePanel;
-    [SerializeField] private GameObject songselectionPanel;
+    [SerializeField] private GameObject songSelectionPanel;
 
     // Game state
     private enum GameState { title, songSelection, playingSong, playingFreeplay };
@@ -26,6 +26,17 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         InputSystem.onAnyButtonPress.CallOnce(ctrl => { receivedInputThisFrame = true; idleTimer = 0.0f; } ); // Sets a bool whenever it gets any inputs from input system (like midi input)
+
+        songSelectionPanel.SetActive(false);
+        titlePanel.SetActive(true);
+        curState = GameState.title;
+        idleTimer = 0.0f;
+        receivedInputThisFrame = false;
+
+        audioSource.Stop();
+        audioSource.loop = false;
+        audioSource.playOnAwake = false;
+        audioSource.clip = null;
     }
 
     private void Update()
@@ -64,7 +75,7 @@ public class GameManager : MonoBehaviour
             {
                 // Go to song selection
                 titlePanel.SetActive(false);
-                songselectionPanel.SetActive(true);
+                songSelectionPanel.SetActive(true);
                 curState = GameState.songSelection;
             }
         }
@@ -98,12 +109,15 @@ public class GameManager : MonoBehaviour
         {
             audioSource.clip = songs[songListIndex].clip;
             audioSource.Play();
+
+            songSelectionPanel.SetActive(false);
         }
     }
 
     public void btn_PlayFreeplay()
     {
         curState = GameState.playingFreeplay;
+        songSelectionPanel.SetActive(false);
     }
 
     private void ResetScene()

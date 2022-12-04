@@ -86,4 +86,4 @@ Thumbs.db
 *.blend[0-9].meta
 
 ### Non-redistributable music
-[Aa]ssets/Songs/
+*/[Aa]ssets/Songs/*

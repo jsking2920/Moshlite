@@ -44,3 +44,5 @@ Based off of https://github.com/jsking2920/60419-Space<br>
 	(https://skfb.ly/6sJqZ) by Pau is licensed under CC Attribution-NonCommercial-NoDerivs (http://creativecommons.org/licenses/by-nc-nd/4.0/).
 - "Drum Set" model <br>
 	(https://skfb.ly/ounBz) by Rohit Paradkar is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+- "JosefinSans" font <br>
+	(fonts.google.com/specimen/Josefin+Sans) by Santiago Orozco is licensed under the Open Font License included in this repo
