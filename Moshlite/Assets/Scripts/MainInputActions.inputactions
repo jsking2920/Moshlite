@@ -201,7 +201,7 @@
                 {
                     "name": "",
                     "id": "22c3bf21-1c11-49e2-a41e-db4ccd730417",
-                    "path": "",
+                    "path": "<MidiDevice>/note036",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -223,7 +223,7 @@
                 {
                     "name": "",
                     "id": "e3613d5c-d297-48c4-8de7-4b47c8b1f3e4",
-                    "path": "",
+                    "path": "<MidiDevice>/note038",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -245,7 +245,7 @@
                 {
                     "name": "",
                     "id": "de6b46b8-d279-4a7e-bd17-3f8e8706b47a",
-                    "path": "",
+                    "path": "<MidiDevice>/note037",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -267,7 +267,7 @@
                 {
                     "name": "",
                     "id": "92f6d379-a141-4d40-88e0-8ae8be273c75",
-                    "path": "",
+                    "path": "<MidiDevice>/note046",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -289,7 +289,7 @@
                 {
                     "name": "",
                     "id": "2bf1e42c-5a89-4b57-a4e4-b72ed30356d5",
-                    "path": "",
+                    "path": "<MidiDevice>/note026",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -311,7 +311,7 @@
                 {
                     "name": "",
                     "id": "fb2602e8-0163-4e42-8a1e-8d8835383040",
-                    "path": "",
+                    "path": "<MidiDevice>/note042",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -333,7 +333,7 @@
                 {
                     "name": "",
                     "id": "8ac0fa41-3bd9-4ada-b6d6-db19b78047c4",
-                    "path": "",
+                    "path": "<MidiDevice>/note044",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -355,7 +355,7 @@
                 {
                     "name": "",
                     "id": "d2334210-ed0f-4381-9377-82fb1e2dfd05",
-                    "path": "",
+                    "path": "<MidiDevice>/note049",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -377,7 +377,7 @@
                 {
                     "name": "",
                     "id": "b481c4df-132e-43f0-aa7c-b99f25da8166",
-                    "path": "",
+                    "path": "<MidiDevice>/note055",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -399,7 +399,7 @@
                 {
                     "name": "",
                     "id": "ebdec6da-9cf6-429b-afe1-bce7d08a6e9d",
-                    "path": "",
+                    "path": "<MidiDevice>/note057",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -421,7 +421,7 @@
                 {
                     "name": "",
                     "id": "fbc8437b-0e04-461a-8e81-34f852ad133c",
-                    "path": "",
+                    "path": "<MidiDevice>/note052",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -443,7 +443,7 @@
                 {
                     "name": "",
                     "id": "456672c1-6de3-4d4b-8b43-cc4f923a406f",
-                    "path": "",
+                    "path": "<MidiDevice>/note051",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -465,7 +465,7 @@
                 {
                     "name": "",
                     "id": "b0cddb01-e7bf-468f-9a32-1532930e3528",
-                    "path": "",
+                    "path": "<MidiDevice>/note059",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -487,7 +487,7 @@
                 {
                     "name": "",
                     "id": "e2d945ee-ce66-4be2-a6eb-1ceb3ed5677a",
-                    "path": "",
+                    "path": "<MidiDevice>/note053",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -509,7 +509,7 @@
                 {
                     "name": "",
                     "id": "83b3d299-f0f6-4f5a-bc6a-8e94b5ef3fdb",
-                    "path": "",
+                    "path": "<MidiDevice>/note048",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -531,7 +531,7 @@
                 {
                     "name": "",
                     "id": "206b82c8-46ef-45e4-b6fd-bf596dad8a1e",
-                    "path": "",
+                    "path": "<MidiDevice>/note050",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -553,7 +553,7 @@
                 {
                     "name": "",
                     "id": "308f0cf6-864e-4bbc-bcc0-e85acf909211",
-                    "path": "",
+                    "path": "<MidiDevice>/note045",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -575,7 +575,7 @@
                 {
                     "name": "",
                     "id": "c17ff38d-5276-4697-83f4-042516fa0a24",
-                    "path": "",
+                    "path": "<MidiDevice>/note047",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -597,7 +597,7 @@
                 {
                     "name": "",
                     "id": "eca5049c-cc31-4ced-9677-0c2dc092047d",
-                    "path": "",
+                    "path": "<MidiDevice>/note043",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -619,7 +619,7 @@
                 {
                     "name": "",
                     "id": "2b0be259-24e1-4e5b-84c2-6c142558d1f1",
-                    "path": "",
+                    "path": "<MidiDevice>/note058",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
