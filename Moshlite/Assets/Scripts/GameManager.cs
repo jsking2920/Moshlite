@@ -167,7 +167,7 @@ public class GameManager : MonoBehaviour
         else
         {
             songTitleText.text = '"' + song.title.ToUpper() + '"';
-            songArtistText.text = "   " + song.artist;
+            songArtistText.text = song.artist;
         }
         timeText.text = System.DateTime.Now.ToString() + ", FINAL GAMES";
         songTitlePanel.SetActive(true);
@@ -200,7 +200,7 @@ public class GameManager : MonoBehaviour
         else
         {
             songTitleText.text = '"' + song.title.ToUpper() + '"';
-            songArtistText.text = "   " + song.artist;
+            songArtistText.text = song.artist;
         }
         timeText.text = System.DateTime.Now.ToString() + ", FINAL GAMES";
         songTitlePanel.SetActive(true);

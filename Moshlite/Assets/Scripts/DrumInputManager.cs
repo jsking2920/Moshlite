@@ -159,6 +159,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _cameraManager.ToggleFisheye(); // Makes lens toggle between high FOV + shake and normal
                 break;
             case Preset.breakdown:
                 break;
@@ -223,6 +224,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _cameraManager.SwapToNext(true); // false for ease in/out; true for jump cut
                 break;
             case Preset.breakdown:
                 break;
@@ -239,6 +241,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _cameraManager.SwapToRandom(true); // false for ease in/out; true for jump cut
                 break;
             case Preset.breakdown:
                 break;
@@ -255,6 +258,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _cameraManager.SwapToFirst(true); // false for ease in/out; true for jump cut
                 break;
             case Preset.breakdown:
                 break;
