@@ -7,13 +7,13 @@ using System;
 public class CameraManager : MonoBehaviour
 {
     [SerializeField] private CinemachineBrain camBrain;
+    private CinemachineImpulseSource impulseSource;
     [SerializeField] private List<MoshCam> cams;
     private int camIndex = 0;
 
     // Serialized noise profiles isnce getting them is a pain otherwise
     [SerializeField] private NoiseSettings handheldShake; // base
     [SerializeField] private NoiseSettings sixDWobble; // for fisheye effect
-    [SerializeField] private NoiseSettings sixDShake; // for shake effect
 
     // Cinemachine blends
     private CinemachineBlendDefinition easeInAndOutBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.EaseInOut, 1.0f);
@@ -21,6 +21,8 @@ public class CameraManager : MonoBehaviour
 
     private void Start()
     {
+        impulseSource = GetComponent<CinemachineImpulseSource>();
+
         foreach (MoshCam cam in cams)
         {
             cam.vcam.enabled = false;
@@ -90,5 +92,10 @@ public class CameraManager : MonoBehaviour
     public void ToggleFisheye()
     {
         cams[camIndex].ToggleFisheye(sixDWobble);
+    }
+
+    public void AddShake()
+    {
+        impulseSource.GenerateImpulseWithForce(5.0f); // TODO: figure out how to scale this by velocity of midi note
     }
 }

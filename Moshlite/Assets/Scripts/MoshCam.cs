@@ -14,7 +14,7 @@ public class MoshCam : MonoBehaviour
     private float defaultNoiseFrequency = 0.5f;
 
     private bool isAnimating = false;
-    private Coroutine curFisheyeAnimation = null;
+    private Coroutine curAnimation = null;
 
     private bool isFisheyeGoingUp = false;
 
@@ -30,41 +30,44 @@ public class MoshCam : MonoBehaviour
 
     public void ResetCam()
     {
-        if (isAnimating)
-        {
-            StopAllCoroutines();
-            curFisheyeAnimation = null;
-            isAnimating = false;
-        }
+        StopAllCoroutines();
+        curAnimation = null;
+        isAnimating = false;
+        isFisheyeGoingUp = false;
 
+        vcam.LookAt = null;
         vcam.m_Lens.FieldOfView = defaultFOV;
         noiseModule.m_NoiseProfile = defaultNoiseSetting;
         noiseModule.m_AmplitudeGain = Random.Range(defaultNoiseAmplitude - 0.1f, defaultNoiseAmplitude + 0.1f);
         noiseModule.m_FrequencyGain = Random.Range(defaultNoiseFrequency - 0.1f, defaultNoiseFrequency + 0.1f);
     }
 
+    public void SetLookAtTarget(Transform target)
+    {
+        vcam.LookAt = target;
+    }
+
     public void ToggleFisheye(NoiseSettings shakeSetting)
     {
         if (isAnimating)
         {
-            StopAllCoroutines();
-            curFisheyeAnimation = null;
+            StopCoroutine(curAnimation);
+            curAnimation = null;
             isAnimating = false;
         }
 
         if (isFisheyeGoingUp)
         {
             isAnimating = true;
-            curFisheyeAnimation = StartCoroutine(FisheyeOffAnimation(shakeSetting));
+            curAnimation = StartCoroutine(FisheyeOffAnimation(shakeSetting));
             isFisheyeGoingUp = false;
         }
         else
         {
             isAnimating = true;
-            curFisheyeAnimation = StartCoroutine(FisheyeOnAnimation(shakeSetting));
+            curAnimation = StartCoroutine(FisheyeOnAnimation(shakeSetting));
             isFisheyeGoingUp = true;
         }
-
     }
 
     public IEnumerator FisheyeOnAnimation(NoiseSettings shakeSetting)
@@ -89,7 +92,7 @@ public class MoshCam : MonoBehaviour
         noiseModule.m_AmplitudeGain = peakShakeAmplitude;
         noiseModule.m_FrequencyGain = peakShakeFrequency;
 
-        curFisheyeAnimation = null;
+        curAnimation = null;
         isAnimating = false;
     }
 
@@ -113,24 +116,57 @@ public class MoshCam : MonoBehaviour
             yield return null;
         }
         isAnimating = false;
-        curFisheyeAnimation = null;
+        curAnimation = null;
         ResetCam();
     }
 
+
+    // Replaced all this garbage with an Impulse source + listener
+    /*
     public void AddShake()
     {
-        if (curFisheyeAnimation != null) return;
+        // Ignore command to add shake if fisheye is happening
+        if (curFisheyeAnimation != null || isFisheyeGoingUp == true) return;
 
         isAnimating = true;
-        noiseModule.m_AmplitudeGain = Mathf.Clamp(noiseModule.m_AmplitudeGain + 1.0f, 0.0f, defaultNoiseAmplitude + 10.0f);
-        noiseModule.m_FrequencyGain += 0.5f;
-        StartCoroutine(DecreaseShake()); // reduces shake back to normal after a delay
+        StartCoroutine(Shake());
+    }
+
+    private IEnumerator Shake()
+    {
+        float amplitudeToAdd = 0.75f;
+        float frequencyToAdd = 7.5f;
+
+        for(int i = 0; i < 8; i++)
+        {
+            noiseModule.m_AmplitudeGain = Mathf.Clamp(noiseModule.m_AmplitudeGain + (amplitudeToAdd / 10.0f), 0.0f, defaultNoiseAmplitude + 8.0f);
+            noiseModule.m_FrequencyGain = Mathf.Clamp(noiseModule.m_FrequencyGain + (frequencyToAdd / 10.0f), 0.0f, defaultNoiseFrequency + 35.0f);
+            yield return new WaitForSeconds(0.02f);
+        }
+
+        StartCoroutine(DecreaseShake());
     }
 
     private IEnumerator DecreaseShake()
     {
-        yield return new WaitForSeconds(0.5f);
-        noiseModule.m_AmplitudeGain -= 1.0f;
-        noiseModule.m_FrequencyGain -= 0.5f;
+        float amplitudeToDecrease = 0.75f;
+        float frequencyToDecrease = 7.5f;
+
+        yield return new WaitForSeconds(0.1f);
+
+        for (int i = 0; i < 10; i++)
+        {
+            noiseModule.m_AmplitudeGain = Mathf.Clamp(noiseModule.m_AmplitudeGain - (amplitudeToDecrease / 10.0f), 0.0f, defaultNoiseAmplitude + 8.0f);
+            noiseModule.m_FrequencyGain = Mathf.Clamp(noiseModule.m_FrequencyGain - (frequencyToDecrease / 10.0f), 0.0f, defaultNoiseFrequency + 35.0f);
+            yield return new WaitForSeconds(0.04f);
+        }
+
+        if (noiseModule.m_AmplitudeGain <= defaultNoiseAmplitude + 0.15f || noiseModule.m_FrequencyGain <= defaultNoiseFrequency + 1.0f)
+        {
+            isAnimating = false;
+            noiseModule.m_AmplitudeGain = defaultNoiseAmplitude;
+            noiseModule.m_FrequencyGain = defaultNoiseFrequency;
+        }
     }
+    */
 }
