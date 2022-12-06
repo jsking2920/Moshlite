@@ -74,7 +74,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15038316457663803}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a20ce03175ce0344583bdbe941e72731, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.03525702
@@ -116,7 +116,7 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -80
+    limit: -98.31469
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
@@ -131,7 +131,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 0
+    limit: 4.692146
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -217,7 +217,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139017315875427606}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a20ce03175ce0344583bdbe941e72731, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.06
@@ -259,22 +259,22 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -20
+    limit: -17.68696
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 70
+    limit: 81.988716
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 30
+    limit: 28.32333
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 0
+    limit: 3
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -441,7 +441,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136953561528414778}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a20ce03175ce0344583bdbe941e72731, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.025594682
@@ -471,18 +471,18 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 23.21106
+    limit: 24.47787
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 3
+    limit: 3.7250366
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 0
+    limit: 8.191148
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -618,7 +618,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443866891168290551}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a20ce03175ce0344583bdbe941e72731, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.025594682
@@ -644,18 +644,18 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -61.730812
+    limit: -75.35682
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 23.21106
+    limit: 28.909561
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 3
+    limit: 5.610596
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
@@ -715,7 +715,7 @@ Rigidbody:
   m_GameObject: {fileID: 1533851001398870246}
   serializedVersion: 2
   m_Mass: 2
-  m_Drag: 0.05
+  m_Drag: 0.1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1065,7 +1065,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064207331014756976}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a20ce03175ce0344583bdbe941e72731, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.024732662
@@ -1098,7 +1098,7 @@ CharacterJoint:
   m_ConnectedBody: {fileID: 5780260366366468793}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: 1.15, y: -2.92, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.00000005122274, y: 0.17164692, z: -0.000000018626451}
   serializedVersion: 2
@@ -1107,18 +1107,18 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -90
+    limit: -29.089321
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 0
+    limit: 11.038176
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 0
+    limit: 71.25586
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
@@ -1271,7 +1271,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2697063406835253553}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a20ce03175ce0344583bdbe941e72731, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1286,7 +1286,7 @@ Rigidbody:
   m_GameObject: {fileID: 2697063406835253553}
   serializedVersion: 2
   m_Mass: 10.15625
-  m_Drag: 0.2
+  m_Drag: 0.1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1360,7 +1360,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e195925727a26514da3c0ba7a036816c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drag: 0
+  hips: {fileID: 7039706542823774277}
+  chest: {fileID: 7259170318845272551}
+  head: {fileID: 5561872836261141569}
+  rightUpperArm: {fileID: 8731739379309199423}
+  rightForeArm: {fileID: 5881675270117679302}
+  rightHand: {fileID: 1136953561528414781}
+  rightIndex: {fileID: 5335858075794267600}
+  rightFingers: {fileID: 2760708859827684518}
+  leftUpperArm: {fileID: 5780260366366468793}
+  leftForeArm: {fileID: 5530319285941969347}
+  leftHand: {fileID: 8094235906267974395}
+  leftIndex: {fileID: 2302903383138244573}
+  leftFingers: {fileID: 2299594943736516491}
+  rightUpperLeg: {fileID: 6572895989175332732}
+  rightLowerLeg: {fileID: 7617775537246859892}
+  rightAnkle: {fileID: 6916082234087315371}
+  rightFoot: {fileID: 793731655989260260}
+  leftUpperLeg: {fileID: 715101015983399225}
+  leftLowerLeg: {fileID: 5284489249321826791}
+  leftAnkle: {fileID: 5294446106781816946}
+  leftFoot: {fileID: 5717453504177378464}
+  dragScalar: 1
+  massScalar: 2
+  chestForce: {x: 0, y: 600, z: 0}
+  headForce: {x: 0, y: 50, z: 0}
+  feetForce: {x: 0, y: -225, z: 0}
 --- !u!1 &2916017020970163581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,7 +1428,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2916017020970163581}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a20ce03175ce0344583bdbe941e72731, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.037
@@ -1445,22 +1470,22 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -70
+    limit: -13.09106
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 10
+    limit: 79.128334
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 87.53107
+    limit: 76.1933
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 0
+    limit: 3.8478732
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -1851,7 +1876,6 @@ GameObject:
   - component: {fileID: 5717453504177378464}
   - component: {fileID: 7947992882154134429}
   - component: {fileID: 679795841417925999}
-  - component: {fileID: 3663074119073001379}
   - component: {fileID: 6044807473751660068}
   m_Layer: 0
   m_Name: LeftFootCollider
@@ -1885,7 +1909,7 @@ Rigidbody:
   m_GameObject: {fileID: 5196033679832261483}
   serializedVersion: 2
   m_Mass: 5
-  m_Drag: 0.2
+  m_Drag: 0.1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1928,7 +1952,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 110.08834
+    limit: 112.69296
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
@@ -1939,7 +1963,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 17.164795
+    limit: 12.733659
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -1951,18 +1975,6 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!75 &3663074119073001379
-ConstantForce:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5196033679832261483}
-  m_Enabled: 1
-  m_Force: {x: 0, y: -125, z: 0}
-  m_RelativeForce: {x: 0, y: 0, z: 0}
-  m_Torque: {x: 0, y: 0, z: 0}
-  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!114 &6044807473751660068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2059,11 +2071,11 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -28.636364
+    limit: -23.216423
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 3.4337618
+    limit: 20.146229
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
@@ -2077,7 +2089,7 @@ CharacterJoint:
     limit: 7.357275
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -2299,7 +2311,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5780260366366468792}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a20ce03175ce0344583bdbe941e72731, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.037
@@ -2341,11 +2353,11 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -70
+    limit: -38.865013
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 10
+    limit: 77.52739
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
@@ -2356,7 +2368,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 0
+    limit: 8.320083
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -2410,7 +2422,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5881675270117679300}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a20ce03175ce0344583bdbe941e72731, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.024732662
@@ -2443,27 +2455,27 @@ CharacterJoint:
   m_ConnectedBody: {fileID: 8731739379309199423}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: -1, y: 0, z: 0}
+  m_Axis: {x: -1.6, y: -2.92, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.000000045634806, y: 0.17162655, z: -0.000000059604645}
   serializedVersion: 2
-  m_SwingAxis: {x: 0, y: 0, z: -1}
+  m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -90
+    limit: -29.089321
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 0
+    limit: 11.038176
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 0
+    limit: 57.468666
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
@@ -2697,7 +2709,7 @@ Rigidbody:
   m_GameObject: {fileID: 6270296876824990981}
   serializedVersion: 2
   m_Mass: 2.5
-  m_Drag: 0.05
+  m_Drag: 0.1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -2896,7 +2908,7 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -2951,7 +2963,7 @@ Rigidbody:
   m_GameObject: {fileID: 6968214557675795034}
   serializedVersion: 2
   m_Mass: 5
-  m_Drag: 0.2
+  m_Drag: 0.1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -2994,18 +3006,18 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 110.08834
+    limit: 96.570404
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 25.468094
+    limit: 22.478775
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 14.804644
+    limit: 5.9873314
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -3276,7 +3288,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7259170318845272550}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a20ce03175ce0344583bdbe941e72731, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3430,13 +3442,13 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7617775537246859891}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a20ce03175ce0344583bdbe941e72731, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.04
-  m_Height: 0.285507
+  m_Height: 0.20277916
   m_Direction: 1
-  m_Center: {x: 0, y: 0.1427535, z: 0}
+  m_Center: {x: 1.0598323e-10, y: 0.10139047, z: -2.4180902e-10}
 --- !u!54 &7617775537246859892
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3472,7 +3484,7 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -80
+    limit: -92.91401
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
@@ -3487,7 +3499,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 0
+    limit: 3.767787
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -3844,7 +3856,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9169929983894563760}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a20ce03175ce0344583bdbe941e72731, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.06
@@ -3886,22 +3898,22 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -20
+    limit: -17.853481
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 70
+    limit: 89.58531
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 30
+    limit: 24.175154
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 0
+    limit: 3
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
