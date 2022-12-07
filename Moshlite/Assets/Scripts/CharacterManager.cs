@@ -1,29 +1,70 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CharacterManager : MonoBehaviour
 {
+    public static CharacterManager S;
+
     [SerializeField] private List<BulbHeadController> chars;
 
     [SerializeField] private GravityZone upwardGravZone;
     [SerializeField] private GravityZone downwardGravZone;
 
+    private UnityEvent bangHeadEvent = new UnityEvent();
+    private UnityEvent crowdKillEvent = new UnityEvent();
+    private UnityEvent moshTowardsCenterEvent = new UnityEvent();
+    private UnityEvent jumpEvent = new UnityEvent();
+    private UnityEvent turnGravityOffEvent = new UnityEvent();
+    private UnityEvent toggleScaleEvent = new UnityEvent();
+
+    public Transform upperPitCenter;
+    public Transform lowerPitCenter;
+
+    private void Awake()
+    {
+        if (S == null)
+        {
+            S = this;
+        }
+        else
+        {
+            Debug.LogError("More than one Character Manager!!!");
+        }
+    }
+
+    public void Subscribe(BulbHeadController c)
+    {
+        bangHeadEvent.AddListener(c.BangHead);
+        jumpEvent.AddListener(c.Jump);
+        crowdKillEvent.AddListener(c.CrowdKill);
+        moshTowardsCenterEvent.AddListener(c.MoshTowardsCenter);
+        turnGravityOffEvent.AddListener(c.TurnGravityOff);
+        toggleScaleEvent.AddListener(c.ToggleScale);
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            foreach (BulbHeadController c in chars)
-            {
-                c.BangHead();
-            }
+            bangHeadEvent.Invoke();
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            foreach (BulbHeadController c in chars)
-            {
-                c.Jump();
-            }
+            jumpEvent.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            crowdKillEvent.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            moshTowardsCenterEvent.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            toggleScaleEvent.Invoke();
         }
     }
 
@@ -56,10 +97,7 @@ public class CharacterManager : MonoBehaviour
 
     public void TurnGravityOff()
     {
-        foreach (BulbHeadController c in chars)
-        {
-            c.useGravity = false;
-        }
+        turnGravityOffEvent.Invoke();
     }
 
     // Add randomness to forces
