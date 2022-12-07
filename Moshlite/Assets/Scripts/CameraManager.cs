@@ -19,6 +19,12 @@ public class CameraManager : MonoBehaviour
     private CinemachineBlendDefinition easeInAndOutBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.EaseInOut, 1.0f);
     private CinemachineBlendDefinition jumpCutBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Style.Cut, 0.0f);
 
+    /* Other ideas for effects 
+        - Jump cut back and forth between two cameras quickly
+        - Use velocity to determine things like go to next or prev cam, jump cut or pan, intensity of shake
+        - Rapidly transition through all cams for a bit
+    */
+
     private void Start()
     {
         impulseSource = GetComponent<CinemachineImpulseSource>();
