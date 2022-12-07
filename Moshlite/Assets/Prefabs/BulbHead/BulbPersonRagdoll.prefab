@@ -92,7 +92,7 @@ Rigidbody:
   m_Mass: 6.09375
   m_Drag: 3
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -235,7 +235,7 @@ Rigidbody:
   m_Mass: 6.09375
   m_Drag: 0.1
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -429,7 +429,7 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 10
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -606,7 +606,7 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 10
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -717,7 +717,7 @@ Rigidbody:
   m_Mass: 2
   m_Drag: 0.1
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -797,7 +797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7100656340348868918
 Transform:
   m_ObjectHideFlags: 0
@@ -908,6 +908,65 @@ Transform:
   m_Father: {fileID: 2457229366477764935}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1958335965353873808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7828554699228251588}
+  - component: {fileID: 7532130792271331639}
+  - component: {fileID: 87373803808170807}
+  m_Layer: 7
+  m_Name: GravityZoneTrigger
+  m_TagString: BulbHead
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7828554699228251588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958335965353873808}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7039706542823774276}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7532130792271331639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958335965353873808}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1738106, y: 0.20046851, z: 0.11490798}
+  m_Center: {x: 0.0000025182983, y: 0.24651718, z: -0.018439353}
+--- !u!114 &87373803808170807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958335965353873808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6af4635b03c4240877a74773f58b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulbHeadController: {fileID: 1379608077722820731}
 --- !u!1 &1994557799987519301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,7 +1142,7 @@ Rigidbody:
   m_Mass: 4.0625
   m_Drag: 5
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1261,6 +1320,7 @@ Transform:
   - {fileID: 715101015983399224}
   - {fileID: 6572895989175332731}
   - {fileID: 7339449136859278295}
+  - {fileID: 7828554699228251588}
   m_Father: {fileID: 3306307336323168464}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1288,7 +1348,7 @@ Rigidbody:
   m_Mass: 10.15625
   m_Drag: 1
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1304,9 +1364,9 @@ GameObject:
   - component: {fileID: 3306307336323168464}
   - component: {fileID: 5730161221755657261}
   - component: {fileID: 1379608077722820731}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BulbPersonRagdoll
-  m_TagString: Untagged
+  m_TagString: BulbHead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1383,9 +1443,11 @@ MonoBehaviour:
   leftFoot: {fileID: 5717453504177378464}
   dragScalar: 1
   massScalar: 2
-  chestForce: {x: 0, y: 1200, z: 0}
+  chestForce: {x: 0, y: 1100, z: 0}
   headForce: {x: 0, y: 60, z: 0}
   feetForce: {x: 0, y: -1600, z: 0}
+  gravityScalar: {x: 1, y: 1, z: 1}
+  useGravity: 1
 --- !u!1 &2916017020970163581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,7 +1508,7 @@ Rigidbody:
   m_Mass: 4.0625
   m_Drag: 0.1
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1589,7 +1651,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0.05
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1911,7 +1973,7 @@ Rigidbody:
   m_Mass: 5
   m_Drag: 0.1
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1982,7 +2044,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5196033679832261483}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e93236eac29fb84c8ebf1ca96c02be5, type: 3}
   m_Name: 
@@ -2034,7 +2096,7 @@ Rigidbody:
   m_Mass: 3
   m_Drag: 0.1
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -2193,11 +2255,11 @@ Rigidbody:
   m_Mass: 6
   m_Drag: 6
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!144 &5561872836261141568
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -2329,7 +2391,7 @@ Rigidbody:
   m_Mass: 4.0625
   m_Drag: 0.1
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -2440,7 +2502,7 @@ Rigidbody:
   m_Mass: 4.0625
   m_Drag: 5
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -2582,7 +2644,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0.05
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -2711,7 +2773,7 @@ Rigidbody:
   m_Mass: 2.5
   m_Drag: 0.1
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -2965,7 +3027,7 @@ Rigidbody:
   m_Mass: 5
   m_Drag: 0.1
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -3048,7 +3110,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6968214557675795034}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e93236eac29fb84c8ebf1ca96c02be5, type: 3}
   m_Name: 
@@ -3095,7 +3157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1863108141427579109}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: HeadCenterOfGravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3305,7 +3367,7 @@ Rigidbody:
   m_Mass: 10.15625
   m_Drag: 5
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -3619,7 +3681,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5414930653178507173
 Transform:
   m_ObjectHideFlags: 0
@@ -3874,7 +3936,7 @@ Rigidbody:
   m_Mass: 6.09375
   m_Drag: 0.1
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0

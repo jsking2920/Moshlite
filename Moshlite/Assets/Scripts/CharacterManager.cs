@@ -4,56 +4,62 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
-    [SerializeField] private List<CharacterController> chars;
+    [SerializeField] private List<BulbHeadController> chars;
 
-    [SerializeField] private Vector3 defaultGravity = new Vector3(0.0f, -9.81f, 0.0f);
-    private bool isGravityOn = true;
-
-    private void Start()
-    {
-        Physics.gravity = defaultGravity;
-    }
+    [SerializeField] private GravityZone upwardGravZone;
+    [SerializeField] private GravityZone downwardGravZone;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            foreach (CharacterController c in chars)
+            foreach (BulbHeadController c in chars)
             {
                 c.BangHead();
             }
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            foreach (CharacterController c in chars)
+            foreach (BulbHeadController c in chars)
             {
                 c.Jump();
             }
         }
     }
-    public void TurnGravityOn()
+
+    public void ToggleAllCharacterGravity()
     {
-        Physics.gravity = defaultGravity;
-        isGravityOn = true;
+        foreach (BulbHeadController c in chars)
+        {
+            c.gravityScalar *= -1.0f;
+        }
+    }
+
+    // TODO: determine ratio by velocity of midi note
+    public void ToggleRandomCharactersGravity(float ratio) // 1.0 for all, 0.0 for none
+    {
+        ratio = Mathf.Clamp(ratio, 0.0f, 1.0f);
+        foreach (BulbHeadController c in chars)
+        {
+            if (Random.Range(0.0f, 1.0f) < ratio)
+            {
+                c.gravityScalar *= -1.0f;
+            }
+        }
+    }
+
+    public void ReverseGravityZones()
+    {
+        upwardGravZone.ToggleGravityZone();
+        downwardGravZone.ToggleGravityZone();
     }
 
     public void TurnGravityOff()
     {
-        Physics.gravity = Vector3.zero;
-        isGravityOn = false;
-    }
-
-    public void ToggleGravity()
-    {
-        if (isGravityOn)
+        foreach (BulbHeadController c in chars)
         {
-            Physics.gravity = Vector3.zero;
+            c.useGravity = false;
         }
-        else
-        {
-            Physics.gravity = defaultGravity;
-        }
-        isGravityOn = !isGravityOn;
     }
 
     // Add randomness to forces
