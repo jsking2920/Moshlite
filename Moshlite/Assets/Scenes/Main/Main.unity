@@ -5369,7 +5369,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145710233}
-  m_LocalRotation: {x: 0.2826191, y: 0.6941314, z: -0.34851226, w: 0.56289196}
+  m_LocalRotation: {x: 0.28261903, y: 0.6941314, z: -0.3485123, w: 0.5628919}
   m_LocalPosition: {x: -3.6, y: 4.94, z: 0.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5692,6 +5692,7 @@ MonoBehaviour:
   songTitleText: {fileID: 809863416}
   songArtistText: {fileID: 2116420130}
   timeText: {fileID: 1219061346}
+  camManager: {fileID: 111664296}
 --- !u!1 &1348876881
 GameObject:
   m_ObjectHideFlags: 0

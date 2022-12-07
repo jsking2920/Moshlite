@@ -32,6 +32,10 @@ public class GameManager : MonoBehaviour
     private float idleTimer = 0.0f;
     private float timeToIdle = 60.0f;
 
+    [SerializeField] private CameraManager camManager;
+    private float camTimer = 0.0f;
+    private float camSwitchDelay = 10.0f;
+
     private void Start()
     {
         InputSystem.onAnyButtonPress.CallOnce(ctrl => { receivedInputThisFrame = true; idleTimer = 0.0f; } ); // Sets a bool whenever it gets any inputs from input system (like midi input)
@@ -88,12 +92,23 @@ public class GameManager : MonoBehaviour
         // Handle title screen logic
         if (curState == GameState.title)
         {
-            if (receivedInputThisFrame)
+            // Go to song selection on enter, space, or mouse button
+            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) //(receivedInputThisFrame)
             {
                 // Go to song selection
                 titlePanel.SetActive(false);
                 songSelectionPanel.SetActive(true);
+                camTimer = 0.0f;
                 curState = GameState.songSelection;
+            }
+            else
+            {
+                camTimer += Time.deltaTime;
+                if (camTimer > camSwitchDelay)
+                {
+                    camTimer = 0.0f;
+                    camManager.SwapToNext();
+                }
             }
         }
         else if (curState == GameState.songSelection)

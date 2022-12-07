@@ -34,12 +34,12 @@ public class CharacterController : MonoBehaviour
     [Header("Physics Scalars")]
     // Scalars applied to all body parts at start
     [SerializeField] private float dragScalar = 1.0f; 
-    [SerializeField] private float massScalar = 1.0f;
+    [SerializeField] private float massScalar = 2.0f;
 
     [Header("Persistent Forces")]
-    [SerializeField] private Vector3 chestForce = new Vector3(0.0f, 800.0f, 0.0f);
-    [SerializeField] private Vector3 headForce = new Vector3(0.0f, 100.0f, 0.0f);
-    [SerializeField] private Vector3 feetForce = new Vector3(0.0f, -200.0f, 0.0f);
+    [SerializeField] private Vector3 chestForce = new Vector3(0.0f, 1200.0f, 0.0f);
+    [SerializeField] private Vector3 headForce = new Vector3(0.0f, 60.0f, 0.0f);
+    [SerializeField] private Vector3 feetForce = new Vector3(0.0f, -1600.0f, 0.0f);
 
     void Start()
     {
@@ -65,7 +65,7 @@ public class CharacterController : MonoBehaviour
 
     public void Jump()
     {
-        hips.AddForce(new Vector3(0.0f, 400.0f, 0.0f), ForceMode.Impulse);
+        hips.AddForce(new Vector3(0.0f, 800.0f, 0.0f), ForceMode.Impulse);
     }
 
     public void BangHead()
