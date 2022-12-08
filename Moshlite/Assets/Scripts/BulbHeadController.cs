@@ -47,15 +47,14 @@ public class BulbHeadController : MonoBehaviour
     [HideInInspector] public bool useGravity = true;
 
     // Scale xyz must be equal
-    private bool isBig = false;
     private Coroutine scaleCoroutine = null;
     private float defaultScale = 1.2f;
-    private float maxScaleScalar = 2.0f;
+    private float maxScale = 1.7f;
 
     void Start()
     {
-        defaultScale = transform.localScale.x;
-        if (transform.localScale.y != defaultScale || transform.localScale.z != defaultScale)
+        defaultScale = hips.transform.localScale.x;
+        if (hips.transform.localScale.y != defaultScale || hips.transform.localScale.z != defaultScale)
         {
             Debug.LogWarning("Scale for bulbheads should be equal on axes");
         }
@@ -175,39 +174,30 @@ public class BulbHeadController : MonoBehaviour
         CrowdKill();
     }
 
-    public void ToggleScale()
+    public void PulseScale()
     {
         if (scaleCoroutine != null) return;
-
-        scaleCoroutine = StartCoroutine(ScaleUpOrDown(!isBig));
+ 
+        scaleCoroutine = StartCoroutine(ScaleEffect());
     }
 
-    private IEnumerator ScaleUpOrDown(bool scaleUp)
+    // Quick pulse effect; Ragdolls aren't stable when scaled up (colliders overlap) so toggle effect isn't an option
+    private IEnumerator ScaleEffect()
     {
-        if (scaleUp)
+        float curScale = defaultScale;
+        while (curScale < maxScale)
         {
-            float curScale = defaultScale;
-            while (curScale < maxScaleScalar)
-            {
-                curScale = Mathf.Lerp(defaultScale, maxScaleScalar, 10.0f * Time.deltaTime);
-                transform.localScale = new Vector3(curScale, curScale, curScale);
-                yield return null;
-            }
-            transform.localScale = new Vector3(maxScaleScalar, maxScaleScalar, maxScaleScalar);
+            curScale += Time.deltaTime * 5.0f;
+            hips.transform.localScale = new Vector3(curScale, curScale, curScale);
+            yield return null;
         }
-        else
+        while (curScale > defaultScale)
         {
-            float curScale = maxScaleScalar;
-            while (curScale > defaultScale)
-            {
-                curScale = Mathf.Lerp(maxScaleScalar, defaultScale, Time.deltaTime);
-                transform.localScale = new Vector3(curScale, curScale, curScale);
-                yield return null;
-            }
-            transform.localScale = new Vector3(defaultScale, defaultScale, defaultScale);
+            curScale -= Time.deltaTime * 5.0f;
+            hips.transform.localScale = new Vector3(curScale, curScale, curScale);
+            yield return null;
         }
-
-        isBig = scaleUp;
+        hips.transform.localScale = new Vector3(defaultScale, defaultScale, defaultScale);
         scaleCoroutine = null;
     }
 
@@ -217,11 +207,6 @@ public class BulbHeadController : MonoBehaviour
         {
             rb.mass *= scalar;
         }
-    }
-
-    public void TurnGravityOff()
-    {
-        useGravity = false;
     }
 
     // To be used by gravity zones, NOT for effects

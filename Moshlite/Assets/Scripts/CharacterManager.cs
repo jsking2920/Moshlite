@@ -16,8 +16,7 @@ public class CharacterManager : MonoBehaviour
     private UnityEvent crowdKillEvent = new UnityEvent();
     private UnityEvent moshTowardsCenterEvent = new UnityEvent();
     private UnityEvent jumpEvent = new UnityEvent();
-    private UnityEvent turnGravityOffEvent = new UnityEvent();
-    private UnityEvent toggleScaleEvent = new UnityEvent();
+    private UnityEvent pulseScaleEvent = new UnityEvent();
 
     public Transform upperPitCenter;
     public Transform lowerPitCenter;
@@ -40,8 +39,7 @@ public class CharacterManager : MonoBehaviour
         jumpEvent.AddListener(c.Jump);
         crowdKillEvent.AddListener(c.CrowdKill);
         moshTowardsCenterEvent.AddListener(c.MoshTowardsCenter);
-        turnGravityOffEvent.AddListener(c.TurnGravityOff);
-        toggleScaleEvent.AddListener(c.ToggleScale);
+        pulseScaleEvent.AddListener(c.PulseScale);
     }
 
     private void Update()
@@ -62,9 +60,13 @@ public class CharacterManager : MonoBehaviour
         {
             moshTowardsCenterEvent.Invoke();
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            toggleScaleEvent.Invoke();
+            pulseScaleEvent.Invoke();
+        }
+        if (Input.GetKeyDown(KeyCode.Period))
+        {
+            ReverseGravityZones();
         }
     }
 
@@ -94,14 +96,4 @@ public class CharacterManager : MonoBehaviour
         upwardGravZone.ToggleGravityZone();
         downwardGravZone.ToggleGravityZone();
     }
-
-    public void TurnGravityOff()
-    {
-        turnGravityOffEvent.Invoke();
-    }
-
-    // Add randomness to forces
-    // figure out mapping of effects
-    // set up some coroutine animations for specific effects
-    // Set up different classes of character (jumpers/head bangers/etc)
 }

@@ -30,9 +30,9 @@ public class GravityZone : MonoBehaviour
     {
         gravity *= -1.0f;
 
-        foreach (Collider coll in Physics.OverlapBox(box.center, box.size * 0.5f, Quaternion.identity, LayerMask.GetMask("GravityTrigger")))
+        foreach (Collider coll in Physics.OverlapBox(box.center, box.size * 0.5f, Quaternion.identity, LayerMask.GetMask("BulbHead")))
         {
-            BulbHeadController c = coll.GetComponent<BulbHeadController>();
+            BulbHeadController c = coll.GetComponent<GravityZoneTrigger>().bulbHeadController;
             if (c != null)
             {
                 c.SetRealGravity(gravity);
