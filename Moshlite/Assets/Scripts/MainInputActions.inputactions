@@ -388,7 +388,7 @@
                 {
                     "name": "",
                     "id": "da8e4249-94c3-4ab1-8fea-64bfac96552b",
-                    "path": "<Keyboard>/r",
+                    "path": "<Keyboard>/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",
@@ -476,7 +476,7 @@
                 {
                     "name": "",
                     "id": "2111a9c8-c8e3-4dcb-b776-5b62444792d1",
-                    "path": "<Keyboard>/y",
+                    "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
                     "groups": "DrumScheme",

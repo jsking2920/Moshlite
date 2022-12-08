@@ -193,7 +193,7 @@ public class DrumInputManager : MonoBehaviour
     {
         if (!context.performed) return;
 
-        // Debug keyboard key: r
+        // Debug keyboard key: y
         if (debugMode) Debug.Log("right crash bow");
 
         switch (_curPreset)
@@ -261,7 +261,7 @@ public class DrumInputManager : MonoBehaviour
     {
         if (!context.performed) return;
 
-        // Debug keyboard key: y
+        // Debug keyboard key: i
         if (debugMode) Debug.Log("ride bell");
 
         switch (_curPreset)
