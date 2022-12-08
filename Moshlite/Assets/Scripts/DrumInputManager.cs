@@ -284,6 +284,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _vfxManager.ToggleRed();
                 break;
             case Preset.breakdown:
                 break;
@@ -300,7 +301,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
-                _characterManager.ReverseGravityZones();
+                _vfxManager.ToggleWacky();
                 break;
             case Preset.breakdown:
                 break;
@@ -317,6 +318,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _characterManager.ReverseGravityZones();
                 break;
             case Preset.breakdown:
                 break;
