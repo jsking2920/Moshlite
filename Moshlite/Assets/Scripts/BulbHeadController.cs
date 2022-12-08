@@ -201,7 +201,7 @@ public class BulbHeadController : MonoBehaviour
         float r = Random.Range(0.0f, 1.0f);
         if (r < 0.3f)
         {
-            hips.AddRelativeForce(new Vector3(Random.Range(-40.0f, 40.0f), Random.Range(100.0f, 300.0f), Random.Range(-40.0f, 40.0f)), ForceMode.Impulse);
+            hips.AddRelativeForce(new Vector3(Random.Range(-150.0f, 150.0f), Random.Range(350.0f, 600.0f), Random.Range(-150.0f, 150.0f)), ForceMode.Impulse);
         }
         else if (r < 0.5f)
         {
@@ -209,8 +209,8 @@ public class BulbHeadController : MonoBehaviour
         }
         else if (r < 0.8f)
         {
-            rightForeArm.AddRelativeForce(new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(10.0f, 30.0f), Random.Range(-20.0f, 20.0f)), ForceMode.Impulse);
-            leftForeArm.AddRelativeForce(new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(10.0f, 30.0f), Random.Range(-20.0f, 20.0f)), ForceMode.Impulse);
+            rightForeArm.AddRelativeForce(new Vector3(Random.Range(-150.0f, 150.0f), Random.Range(60.0f, 150.0f), Random.Range(-150.0f, 150.0f)), ForceMode.Impulse);
+            leftForeArm.AddRelativeForce(new Vector3(Random.Range(-150.0f, 150.0f), Random.Range(60.0f, 150.0f), Random.Range(-150.0f, 150.0f)), ForceMode.Impulse);
         }
     }
 
