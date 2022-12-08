@@ -16,6 +16,7 @@ public class CharacterManager : MonoBehaviour
     private UnityEvent crowdKillEvent = new UnityEvent();
     private UnityEvent moshTowardsCenterEvent = new UnityEvent();
     private UnityEvent jumpEvent = new UnityEvent();
+    private UnityEvent toggleGravityEvent = new UnityEvent();
     private UnityEvent pulseScaleEvent = new UnityEvent();
 
     public Transform upperPitCenter;
@@ -40,6 +41,7 @@ public class CharacterManager : MonoBehaviour
         crowdKillEvent.AddListener(c.CrowdKill);
         moshTowardsCenterEvent.AddListener(c.MoshTowardsCenter);
         pulseScaleEvent.AddListener(c.PulseScale);
+        toggleGravityEvent.AddListener(c.ToggleGravity);
     }
 
     private void Update()
@@ -68,13 +70,17 @@ public class CharacterManager : MonoBehaviour
         {
             ReverseGravityZones();
         }
+        if (Input.GetKeyDown(KeyCode.Comma))
+        {
+            toggleGravityEvent.Invoke();
+        }
     }
 
     public void ToggleAllCharacterGravity()
     {
         foreach (BulbHeadController c in chars)
         {
-            c.gravityScalar *= -1.0f;
+            //c.gravityScalar *= -1.0f;
         }
     }
 
@@ -86,11 +92,12 @@ public class CharacterManager : MonoBehaviour
         {
             if (Random.Range(0.0f, 1.0f) < ratio)
             {
-                c.gravityScalar *= -1.0f;
+                //c.gravityScalar *= -1.0f;
             }
         }
     }
-
+    
+    // Pushes all characters towards center
     public void ReverseGravityZones()
     {
         upwardGravZone.ToggleGravityZone();

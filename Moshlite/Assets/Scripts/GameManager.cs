@@ -184,7 +184,7 @@ public class GameManager : MonoBehaviour
             songTitleText.text = '"' + song.title.ToUpper() + '"';
             songArtistText.text = song.artist;
         }
-        timeText.text = System.DateTime.Now.ToString() + ", FINAL GAMES";
+        timeText.text = System.DateTime.Now.ToString().Replace("/", ".") + ", FINAL GAMES";
         songTitlePanel.SetActive(true);
         yield return new WaitForSeconds(4.0f);
 

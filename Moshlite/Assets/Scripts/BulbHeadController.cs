@@ -43,7 +43,6 @@ public class BulbHeadController : MonoBehaviour
     [SerializeField] private Vector3 feetForce = new Vector3(0.0f, -1600.0f, 0.0f);
 
     private Vector3 gravity = new Vector3(0.0f, -9.81f, 0.0f); // Represents "real gravity", set by gravity zones
-    [HideInInspector] public Vector3 gravityScalar = new Vector3(1.0f, 1.0f, 1.0f); // Can be changed for effects
     [HideInInspector] public bool useGravity = true;
 
     // Scale xyz must be equal
@@ -75,9 +74,6 @@ public class BulbHeadController : MonoBehaviour
     void FixedUpdate()
     {
         // Apply persistent forces
-
-        // If there's no gravity, don't apply persistent forces to make body rigid
-        // Otherwise make sure feet are always pointed in the direction of gravity
         if (useGravity)
         {
             if (gravity.y > 0.0f)
@@ -102,14 +98,40 @@ public class BulbHeadController : MonoBehaviour
 
             foreach (Rigidbody rb in rbList)
             {
-                rb.AddForce(new Vector3(gravity.x * gravityScalar.x, gravity.y * gravityScalar.y, gravity.z * gravityScalar.z), ForceMode.Acceleration);
+                rb.AddForce(gravity, ForceMode.Acceleration);
             }
+        }
+        else
+        {
+            // Characters are floating inexplicably with gravity off even though no forcesa are being applied to them, so do all this to cancel it out
+            // And generally make them float with their feet towards the ground
+            
+            // On this note: There seems to be a mystery force on all the character pulling them upwards at all times (see comment above too)
+  
+            // TODO: make this all less gross; shouldn't need to case or apply any forces if gravity is off
+            if (gravity.y > 0.0f)
+            {
+                hips.AddForce(-0.76f * chestForce); // Pull down to correct for mystery force
+
+                // Pull on feet and to reorient a bit
+                leftAnkle.AddForce(-0.1f * feetForce); 
+                rightAnkle.AddForce(-0.1f * feetForce);
+
+                head.AddForce(-2.0f * headForce);
+            }
+            else
+            {
+                hips.AddForce(-0.51f * chestForce); // Pull down to correct for mystery force      
+            }
+
+            // perlin noise 
+            // float p = Unity.Mathematics.noise.pnoise(new Unity.Mathematics.float2(Time.realtimeSinceStartup, 0.0f), new Unity.Mathematics.float2(5.0f, 1.0f));
         }
     }
 
     public void Jump()
     {
-        hips.AddRelativeForce(new Vector3(Random.Range(-100.0f, 100.0f), Random.Range(1500.0f, 2750.0f), Random.Range(-100.0f, 100.0f)), ForceMode.Impulse);
+        hips.AddRelativeForce(new Vector3(Random.Range(-100.0f, 100.0f), Random.Range(1500.0f, 2500.0f), Random.Range(-100.0f, 100.0f)), ForceMode.Impulse);
     }
 
     public void BangHead()
@@ -207,6 +229,14 @@ public class BulbHeadController : MonoBehaviour
         {
             rb.mass *= scalar;
         }
+    }
+
+    public void ToggleGravity()
+    {
+        useGravity = !useGravity;
+
+        // Toss up in the air a bit to make the effect obvious
+        chest.AddForce(Vector3.up * 40.0f, ForceMode.Impulse);
     }
 
     // To be used by gravity zones, NOT for effects
