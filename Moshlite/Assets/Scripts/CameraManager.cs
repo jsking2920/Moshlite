@@ -23,6 +23,7 @@ public class CameraManager : MonoBehaviour
         - Jump cut back and forth between two cameras quickly
         - Use velocity to determine things like go to next or prev cam, jump cut or pan, intensity of shake
         - Rapidly transition through all cams for a bit
+        - ***Set depth of field post processing parameters for each individual cam***
     */
 
     private void Start()

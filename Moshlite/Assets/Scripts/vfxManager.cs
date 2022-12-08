@@ -12,5 +12,6 @@ public class vfxManager : MonoBehaviour
         - Weird projection
         - bring blur and bloom way up for a bit
         - Moth particle effects
+        - Bokeh depth of field
     */
 }
