@@ -47,6 +47,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _characterManager.RandomSmallDance();
                 break;
             case Preset.breakdown:
                 break;
@@ -63,6 +64,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _characterManager.RandomMosh();
                 break;
             case Preset.breakdown:
                 break;
@@ -95,6 +97,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _characterManager.MoshTowardsCenter();
                 break;
             case Preset.breakdown:
                 break;
@@ -111,6 +114,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _characterManager.CrowdKill();
                 break;
             case Preset.breakdown:
                 break;
@@ -127,6 +131,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _characterManager.BangHeads();
                 break;
             case Preset.breakdown:
                 break;
@@ -143,6 +148,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _characterManager.PulseScale();
                 break;
             case Preset.breakdown:
                 break;
@@ -193,6 +199,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _characterManager.Jump();
                 break;
             case Preset.breakdown:
                 break;
@@ -209,6 +216,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _characterManager.RandomMosh();
                 break;
             case Preset.breakdown:
                 break;
@@ -292,6 +300,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _characterManager.ReverseGravityZones();
                 break;
             case Preset.breakdown:
                 break;
@@ -324,6 +333,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _characterManager.ToggleGravity();
                 break;
             case Preset.breakdown:
                 break;

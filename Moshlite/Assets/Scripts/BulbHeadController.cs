@@ -196,6 +196,24 @@ public class BulbHeadController : MonoBehaviour
         CrowdKill();
     }
 
+    public void RandomSmallDance()
+    {
+        float r = Random.Range(0.0f, 1.0f);
+        if (r < 0.3f)
+        {
+            hips.AddRelativeForce(new Vector3(Random.Range(-40.0f, 40.0f), Random.Range(100.0f, 300.0f), Random.Range(-40.0f, 40.0f)), ForceMode.Impulse);
+        }
+        else if (r < 0.5f)
+        {
+            BangHead();
+        }
+        else if (r < 0.8f)
+        {
+            rightForeArm.AddRelativeForce(new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(10.0f, 30.0f), Random.Range(-20.0f, 20.0f)), ForceMode.Impulse);
+            leftForeArm.AddRelativeForce(new Vector3(Random.Range(-20.0f, 20.0f), Random.Range(10.0f, 30.0f), Random.Range(-20.0f, 20.0f)), ForceMode.Impulse);
+        }
+    }
+
     public void PulseScale()
     {
         if (scaleCoroutine != null) return;
@@ -236,7 +254,7 @@ public class BulbHeadController : MonoBehaviour
         useGravity = !useGravity;
 
         // Toss up in the air a bit to make the effect obvious
-        chest.AddForce(Vector3.up * 40.0f, ForceMode.Impulse);
+        chest.AddRelativeForce(Vector3.up * 40.0f, ForceMode.Impulse);
     }
 
     // To be used by gravity zones, NOT for effects

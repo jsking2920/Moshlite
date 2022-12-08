@@ -18,9 +18,14 @@ public class CharacterManager : MonoBehaviour
     private UnityEvent jumpEvent = new UnityEvent();
     private UnityEvent toggleGravityEvent = new UnityEvent();
     private UnityEvent pulseScaleEvent = new UnityEvent();
+    private UnityEvent randomSmallDanceEvent = new UnityEvent();
 
     public Transform upperPitCenter;
     public Transform lowerPitCenter;
+
+    /* Other ideas for effects 
+        - Influence intensity of animations with midi velocity
+    */
 
     private void Awake()
     {
@@ -42,61 +47,72 @@ public class CharacterManager : MonoBehaviour
         moshTowardsCenterEvent.AddListener(c.MoshTowardsCenter);
         pulseScaleEvent.AddListener(c.PulseScale);
         toggleGravityEvent.AddListener(c.ToggleGravity);
+        randomSmallDanceEvent.AddListener(c.RandomSmallDance);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            bangHeadEvent.Invoke();
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            jumpEvent.Invoke();
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            crowdKillEvent.Invoke();
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            moshTowardsCenterEvent.Invoke();
-        }
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            pulseScaleEvent.Invoke();
-        }
-        if (Input.GetKeyDown(KeyCode.Period))
-        {
-            ReverseGravityZones();
-        }
-        if (Input.GetKeyDown(KeyCode.Comma))
-        {
-            toggleGravityEvent.Invoke();
-        }
-    }
-
-    public void ToggleAllCharacterGravity()
+    public void RandomMosh()
     {
         foreach (BulbHeadController c in chars)
         {
-            //c.gravityScalar *= -1.0f;
-        }
-    }
-
-    // TODO: determine ratio by velocity of midi note
-    public void ToggleRandomCharactersGravity(float ratio) // 1.0 for all, 0.0 for none
-    {
-        ratio = Mathf.Clamp(ratio, 0.0f, 1.0f);
-        foreach (BulbHeadController c in chars)
-        {
-            if (Random.Range(0.0f, 1.0f) < ratio)
+            float r = Random.Range(0.0f, 1.0f);
+            if (r < 0.35f)
             {
-                //c.gravityScalar *= -1.0f;
+                c.BangHead();
+            }
+            else if (r < 0.5f)
+            {
+                c.CrowdKill();
+            }
+            else if(r < 0.7f)
+            {
+                c.MoshTowardsCenter();
+            }
+            else if (r < 0.8f)
+            {
+                c.Jump();
+            }
+            else
+            {
+                // Do nothing
             }
         }
     }
-    
+
+    public void BangHeads()
+    {
+        bangHeadEvent.Invoke();
+    }
+
+    public void Jump()
+    {
+        jumpEvent.Invoke();
+    }
+
+    public void CrowdKill()
+    {
+        crowdKillEvent.Invoke();
+    }
+
+    public void MoshTowardsCenter()
+    {
+        moshTowardsCenterEvent.Invoke();
+    }
+
+    public void RandomSmallDance()
+    {
+        randomSmallDanceEvent.Invoke();
+    }
+
+    public void PulseScale()
+    {
+        pulseScaleEvent.Invoke();
+    }
+
+    public void ToggleGravity()
+    {
+        toggleGravityEvent.Invoke();
+    }
+
     // Pushes all characters towards center
     public void ReverseGravityZones()
     {
