@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fbd42c0ad16dcbb43971c4a94354a3e7
+guid: af4511e646d15a94b8c3286108870d21
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,23 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Stairs
-    second: {fileID: 2100000, guid: e1cd1dfa357ca734a9cbf632cad75de8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Walls
-    second: {fileID: 2100000, guid: deffbaf9331461f4f92a4a03ebe3bca3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: stairs_INSIDE
-    second: {fileID: 2100000, guid: 10a8562681414974c8600b4c1bd01adf, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: walls_INSIDE
-    second: {fileID: 2100000, guid: f69dfc99671b04a4caf9fc7d5c8e2ef5, type: 2}
+      name: lambert1
+    second: {fileID: 2100000, guid: f8bcb4095ac35044d8b2041d34623460, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -52,10 +37,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.25
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -108,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.0025
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

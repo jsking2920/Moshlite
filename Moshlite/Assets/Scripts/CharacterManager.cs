@@ -59,25 +59,21 @@ public class CharacterManager : MonoBehaviour
         foreach (BulbHeadController c in chars)
         {
             float r = Random.Range(0.0f, 1.0f);
-            if (r < 0.35f)
+            if (r < 0.3f)
             {
                 c.BangHead();
             }
-            else if (r < 0.5f)
+            else if (r < 0.6f)
             {
                 c.CrowdKill();
             }
-            else if(r < 0.7f)
+            else if(r < 0.9f)
             {
                 c.MoshTowardsCenter();
             }
-            else if (r < 0.8f)
-            {
-                c.Jump();
-            }
             else
             {
-                // Do nothing
+                c.Jump();
             }
         }
     }
