@@ -3724,6 +3724,7 @@ MonoBehaviour:
   baseVolume: {fileID: 171446309}
   redVolume: {fileID: 616247527}
   wackyVolume: {fileID: 551917880}
+  watercolorEffect: {fileID: 1599096761}
 --- !u!4 &620147514
 Transform:
   m_ObjectHideFlags: 0
@@ -6697,7 +6698,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122062857}
-  m_LocalRotation: {x: 0.037439656, y: 0.95895815, z: -0.15176606, w: 0.23656847}
+  m_LocalRotation: {x: 0.037439648, y: 0.95895815, z: -0.15176603, w: 0.23656844}
   m_LocalPosition: {x: -1.228, y: 2.941, z: 0.134}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8810,6 +8811,7 @@ GameObject:
   - component: {fileID: 1599096756}
   - component: {fileID: 1599096759}
   - component: {fileID: 1599096760}
+  - component: {fileID: 1599096761}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8950,6 +8952,32 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1599096761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599096755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16142cfdd81ca46f8ac6acd18ae44068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _opacity: 1
+  _edgeColor: {r: 0, g: 0, b: 0, a: 1}
+  _edgeContrast: 1.2
+  _fillColor: {r: 1, g: 1, b: 1, a: 1}
+  _blurWidth: 1
+  _blurFrequency: 0.5
+  _hueShift: 0.1
+  _interval: 1
+  _iteration: 20
+  _overlayMode: 0
+  _overlayTexture: {fileID: 0}
+  _overlayOpacity: 0
+  _shader: {fileID: -6465566751694194690, guid: 3e152a7c1e1bb4527901f4b4a55fbbc3,
+    type: 3}
 --- !u!1 &1628492087
 GameObject:
   m_ObjectHideFlags: 0

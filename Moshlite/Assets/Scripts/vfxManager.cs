@@ -1,8 +1,8 @@
+using Kino.Aqua.Universal;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.Rendering.PostProcessing;
 
 public class vfxManager : MonoBehaviour
 {
@@ -26,11 +26,14 @@ public class vfxManager : MonoBehaviour
     private VolumeState state = VolumeState.normal;
     private enum VolumeState { normal, red, wacky };
 
+    [SerializeField] private AquaEffect watercolorEffect; // Would like to animate this on and off (via "_opacity") but can't because the var is private and the class is sealed
+
     private void Start()
     {
         baseVolume.enabled = true;
         redVolume.enabled = false;
         wackyVolume.enabled = false;
+        watercolorEffect.enabled = false;
     }
 
     public void ToggleRed()
@@ -75,5 +78,10 @@ public class vfxManager : MonoBehaviour
                 state = VolumeState.normal;
                 break;
         }
+    }
+
+    public void ToggleWatercolor()
+    {
+        watercolorEffect.enabled = !watercolorEffect.enabled;
     }
 }

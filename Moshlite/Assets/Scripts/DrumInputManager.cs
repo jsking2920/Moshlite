@@ -81,6 +81,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _vfxManager.ToggleWatercolor();
                 break;
             case Preset.breakdown:
                 break;
