@@ -19,6 +19,8 @@ public class CharacterManager : MonoBehaviour
     private UnityEvent toggleGravityEvent = new UnityEvent();
     private UnityEvent pulseScaleEvent = new UnityEvent();
     private UnityEvent randomSmallDanceEvent = new UnityEvent();
+    private UnityEvent flickerEvent = new UnityEvent();
+    private UnityEvent toggleLightEvent = new UnityEvent();
 
     public Transform upperPitCenter;
     public Transform lowerPitCenter;
@@ -48,6 +50,8 @@ public class CharacterManager : MonoBehaviour
         pulseScaleEvent.AddListener(c.PulseScale);
         toggleGravityEvent.AddListener(c.ToggleGravity);
         randomSmallDanceEvent.AddListener(c.RandomSmallDance);
+        toggleLightEvent.AddListener(c.ToggleLight);
+        flickerEvent.AddListener(c.Flicker);
     }
 
     public void RandomMosh()
@@ -118,5 +122,15 @@ public class CharacterManager : MonoBehaviour
     {
         upwardGravZone.ToggleGravityZone();
         downwardGravZone.ToggleGravityZone();
+    }
+
+    public void Flicker()
+    {
+        flickerEvent.Invoke();
+    }
+
+    public void ToggleLights()
+    {
+        toggleLightEvent.Invoke();
     }
 }

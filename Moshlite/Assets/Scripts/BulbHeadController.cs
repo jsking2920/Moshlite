@@ -50,6 +50,18 @@ public class BulbHeadController : MonoBehaviour
     private float defaultScale = 1.2f;
     private float maxScale = 1.7f;
 
+    [Header("Lighting")]
+    [SerializeField] private Renderer filamentRenderer;
+    [SerializeField] private Renderer headRenderer;
+    [SerializeField] private Material litMat;
+    [SerializeField] private Material unlitMat;
+    [SerializeField] private Material litFilamentMat;
+    [SerializeField] private Material unlitFilamentMat;
+    [SerializeField] private Light pointLight;
+    private bool isLit = true;
+    private Coroutine flickeringCoroutine = null;
+    bool flickerAgain = false;
+
     void Start()
     {
         defaultScale = hips.transform.localScale.x;
@@ -261,5 +273,79 @@ public class BulbHeadController : MonoBehaviour
     public void SetRealGravity(Vector3 newGrav)
     {
         gravity = newGrav;
+    }
+
+    public void ToggleLight()
+    {
+        if (flickeringCoroutine != null) return;
+
+        ToggleLightInternal();
+    }
+
+    public void Flicker()
+    {
+        if (flickeringCoroutine != null)
+        {
+            flickerAgain = true;
+            return;
+        }
+        else
+        {
+            flickeringCoroutine = StartCoroutine(FlickerCo());
+        }
+    }
+
+    // TODO: this could look better
+    private IEnumerator FlickerCo()
+    {
+        flickerAgain = false;
+
+        bool target = !isLit;
+
+        float flickerLength = 1.0f;
+        float timer = 0.0f;
+        
+        while (timer < flickerLength)
+        {
+            float timeDelta = Random.Range(0.02f, 0.15f);
+            timer += timeDelta;
+            yield return new WaitForSeconds(timeDelta);
+
+            if (Random.Range(0, 2) == 0)
+            {
+                ToggleLightInternal();
+            }
+        }
+
+        if (isLit != target)
+        {
+            ToggleLightInternal();
+        }
+
+        if (flickerAgain)
+        {
+            flickeringCoroutine = StartCoroutine(FlickerCo());
+        }
+        else
+        {
+            flickeringCoroutine = null;
+        }
+    }
+
+    private void ToggleLightInternal()
+    {
+        if (isLit)
+        {
+            headRenderer.material = unlitMat;
+            filamentRenderer.material = unlitFilamentMat;
+            pointLight.enabled = false;
+        }
+        else
+        {
+            headRenderer.material = litMat;
+            filamentRenderer.material = litFilamentMat;
+            pointLight.enabled = true;
+        }
+        isLit = !isLit;
     }
 }

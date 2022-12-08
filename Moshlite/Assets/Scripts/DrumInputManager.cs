@@ -350,6 +350,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _lightingManager.ToggleLights();
                 break;
             case Preset.breakdown:
                 break;
@@ -366,6 +367,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
+                _lightingManager.FlickerEffect();
                 break;
             case Preset.breakdown:
                 break;

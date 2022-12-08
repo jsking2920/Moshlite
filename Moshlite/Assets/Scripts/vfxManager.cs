@@ -11,5 +11,6 @@ public class vfxManager : MonoBehaviour
         - Dithering / switch to really low res color space to create a lot of banding
         - Weird projection
         - bring blur and bloom way up for a bit
+        - Moth particle effects
     */
 }

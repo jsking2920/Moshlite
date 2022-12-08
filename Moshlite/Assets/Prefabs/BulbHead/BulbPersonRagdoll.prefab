@@ -1446,8 +1446,14 @@ MonoBehaviour:
   chestForce: {x: 0, y: 1080, z: 0}
   headForce: {x: 0, y: 100, z: 0}
   feetForce: {x: 0, y: -1600, z: 0}
-  gravityScalar: {x: 1, y: 1, z: 1}
   useGravity: 1
+  filamentRenderer: {fileID: 902276366123521174}
+  headRenderer: {fileID: 4530763641751638463}
+  litMat: {fileID: 2100000, guid: 111dc9fd41287c84ba0a0fdf78d50101, type: 2}
+  unlitMat: {fileID: 2100000, guid: ba20f401de303a04784dec5fa64e6669, type: 2}
+  litFilamentMat: {fileID: 2100000, guid: 075deef53d30ab24ea077f147d9b8992, type: 2}
+  unlitFilamentMat: {fileID: 2100000, guid: 11983d83b071f7343ba5ba8d072dfffc, type: 2}
+  pointLight: {fileID: 1436440587633475058}
 --- !u!1 &2916017020970163581
 GameObject:
   m_ObjectHideFlags: 0

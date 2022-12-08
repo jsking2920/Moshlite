@@ -10,4 +10,14 @@ public class LightingManager : MonoBehaviour
         - Make everyting red
         - Flare all the lights up for a big swell
     */
+
+    public void FlickerEffect()
+    {
+        CharacterManager.S.Flicker();
+    }
+
+    public void ToggleLights()
+    {
+        CharacterManager.S.ToggleLights();
+    }
 }
