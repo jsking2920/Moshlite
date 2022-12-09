@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked; // hide cursor
+
         InputSystem.onAnyButtonPress.CallOnce(OnReceivedInput); // Sets a bool whenever it gets any inputs from input system (like midi input)
         titlePanel.SetActive(true);
         songTitlePanel.SetActive(false);
