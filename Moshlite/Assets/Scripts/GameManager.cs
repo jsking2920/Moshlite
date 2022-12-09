@@ -10,13 +10,12 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [Header("Audio")]
-    [SerializeField] private List<Song> songs = new List<Song>();
+    [SerializeField] private List<Song> songs = new List<Song>(); // Will be 11 songs
     [SerializeField] private AudioSource audioSource;
     private Song curSong = null;
 
     [Header("UI")]
     [SerializeField] private GameObject titlePanel;
-    [SerializeField] private GameObject songSelectionPanel;
     [SerializeField] private Image fadeToBlackImage;
     
     [SerializeField] private GameObject songTitlePanel;
@@ -25,7 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timeText;
 
     // Game state
-    private enum GameState { title, songSelection, playingSong, playingFreeplay, fadingToReset };
+    private enum GameState { title, playingSong, playingFreeplay, fadingToReset };
     private GameState curState = GameState.title;
 
     private bool receivedInputThisFrame = false; 
@@ -39,8 +38,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         InputSystem.onAnyButtonPress.CallOnce(OnReceivedInput); // Sets a bool whenever it gets any inputs from input system (like midi input)
-
-        songSelectionPanel.SetActive(false);
         titlePanel.SetActive(true);
         songTitlePanel.SetActive(false);
         songTitleText.text = "";
@@ -97,13 +94,26 @@ public class GameManager : MonoBehaviour
         {
             // Go to song selection on enter, space, or mouse button
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) //(receivedInputThisFrame)
-            {
-                // Go to song selection
-                titlePanel.SetActive(false);
-                songSelectionPanel.SetActive(true);
-                camTimer = 0.0f;
-                curState = GameState.songSelection;
+            {        
+                int r = Random.Range(0, songs.Count - 1); // 11th song is not in random pool, it's secret
+                while (r == LastSongTracker.S.lastSong || r == LastSongTracker.S.secondToLastSong)
+                {
+                    r = Random.Range(0, songs.Count - 1);
+                }
+                PlaySong(r);
             }
+            else if (Input.GetKeyDown(KeyCode.Alpha1)) PlaySong(0);
+            else if (Input.GetKeyDown(KeyCode.Alpha2)) PlaySong(1);
+            else if (Input.GetKeyDown(KeyCode.Alpha3)) PlaySong(2);
+            else if (Input.GetKeyDown(KeyCode.Alpha4)) PlaySong(3);
+            else if (Input.GetKeyDown(KeyCode.Alpha5)) PlaySong(4);
+            else if (Input.GetKeyDown(KeyCode.Alpha6)) PlaySong(5);
+            else if (Input.GetKeyDown(KeyCode.Alpha7)) PlaySong(6);
+            else if (Input.GetKeyDown(KeyCode.Alpha8)) PlaySong(7);
+            else if (Input.GetKeyDown(KeyCode.Alpha9)) PlaySong(8);
+            else if (Input.GetKeyDown(KeyCode.Alpha0)) PlaySong(9);
+            else if (Input.GetKeyDown(KeyCode.Minus)) PlaySong(10);
+            else if (Input.GetKeyDown(KeyCode.Equals)) PlayFreeplay();
             else
             {
                 camTimer += Time.deltaTime;
@@ -113,10 +123,6 @@ public class GameManager : MonoBehaviour
                     camManager.SwapToNext();
                 }
             }
-        }
-        else if (curState == GameState.songSelection)
-        {
-            // just waiting for user to hit a button
         }
         else if (curState == GameState.playingSong)
         {
@@ -142,31 +148,32 @@ public class GameManager : MonoBehaviour
         idleTimer = 0.0f;
     }
 
-    public void btn_PlaySong(int songListIndex)
+    public void PlaySong(int i)
     {
+        titlePanel.SetActive(false);
+        camTimer = 0.0f;
+
         curState = GameState.playingSong;
-        
-        if (songListIndex < songs.Count)
-        {
-            songSelectionPanel.SetActive(false);
+        curSong = songs[i];
+        audioSource.clip = songs[i].clip;
+        audioSource.Play();
+        StartCoroutine(FadeToPlayMode(songs[i]));
 
-            curSong = songs[songListIndex];
-            audioSource.clip = curSong.clip;
-            audioSource.Play();
-
-            StartCoroutine(FadeToPlayMode(curSong));
-        }
+        LastSongTracker.S.secondToLastSong = LastSongTracker.S.lastSong;
+        LastSongTracker.S.lastSong = i;
     }
 
-    public void btn_PlayFreeplay()
+    public void PlayFreeplay()
     {
-        curState = GameState.playingFreeplay;
-        songSelectionPanel.SetActive(false);
-        curSong = null;
+        titlePanel.SetActive(false);
+        camTimer = 0.0f;
 
+        curState = GameState.playingFreeplay;
+        curSong = null;
         StartCoroutine(FadeToPlayMode());
     }
 
+    // TODO: sync this up with intros of the songs
     public IEnumerator FadeToPlayMode(Song song = null)
     {
         float cur_alpha = 0.0f;
@@ -174,7 +181,7 @@ public class GameManager : MonoBehaviour
         // Fade to black
         while (cur_alpha < 0.99f)
         {
-            cur_alpha = Mathf.Lerp(cur_alpha, 1.0f, Time.deltaTime * 2.0f);
+            cur_alpha += Time.deltaTime * 0.8f;
             fadeToBlackImage.color = new Color(fadeToBlackImage.color.r, fadeToBlackImage.color.g, fadeToBlackImage.color.b, cur_alpha);
             yield return null;
         }
@@ -194,7 +201,7 @@ public class GameManager : MonoBehaviour
         }
         timeText.text = System.DateTime.Now.ToString().Replace("/", ".") + ", GAMES PREMIERE";
         songTitlePanel.SetActive(true);
-        yield return new WaitForSeconds(4.0f);
+        yield return new WaitForSeconds(4.25f);
 
         fadeToBlackImage.color = new Color(0, 0, 0, 0);
         songTitlePanel.SetActive(false);
@@ -207,7 +214,7 @@ public class GameManager : MonoBehaviour
         // Fade to black
         while (cur_alpha < 0.99f)
         {
-            cur_alpha = Mathf.Lerp(cur_alpha, 1.0f, Time.deltaTime * 2.0f);
+            cur_alpha += Time.deltaTime * 0.8f;
             fadeToBlackImage.color = new Color(fadeToBlackImage.color.r, fadeToBlackImage.color.g, fadeToBlackImage.color.b, cur_alpha);
             yield return null;
         }
@@ -228,7 +235,7 @@ public class GameManager : MonoBehaviour
         // Fade to black
         while (cur_alpha < 0.99f)
         {
-            cur_alpha = Mathf.Lerp(cur_alpha, 1.0f, Time.deltaTime * 2.0f);
+            cur_alpha += Time.deltaTime;
             fadeToBlackImage.color = new Color(fadeToBlackImage.color.r, fadeToBlackImage.color.g, fadeToBlackImage.color.b, cur_alpha);
             yield return null;
         }

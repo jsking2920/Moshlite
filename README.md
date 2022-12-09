@@ -46,5 +46,7 @@ Based off of https://github.com/jsking2920/60419-Space<br>
 	(https://skfb.ly/ounBz) by Rohit Paradkar is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 - "JosefinSans" font <br>
 	(fonts.google.com/specimen/Josefin+Sans) by Santiago Orozco is licensed under the Open Font License included in this repo
+- "Noto Sans Japanese" font <br>
+	(https://fonts.google.com/noto/specimen/Noto+Sans+JP/tester) is licensed under the Open Font License included in this repo 
 - "Kino Aqua" post-processing effect <br>
 	(https://github.com/keijiro/KinoAqua) by Keijiro Takahashi is licensed under the unlicense (https://github.com/keijiro/KinoAqua/blob/main/LICENSE)

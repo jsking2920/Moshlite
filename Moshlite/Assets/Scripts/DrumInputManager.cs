@@ -75,7 +75,7 @@ public class DrumInputManager : MonoBehaviour
     {
         if (!context.performed) return;
 
-        // Debug keyboard key: 1
+        // Debug keyboard key: a
         if (debugMode) Debug.Log("Snare rim");
 
         switch (_curPreset)
@@ -298,7 +298,7 @@ public class DrumInputManager : MonoBehaviour
     {
         if (!context.performed) return;
 
-        // Debug keyboard key: 2
+        // Debug keyboard key: q
         if (debugMode) Debug.Log("tom 1 rim");
 
         switch (_curPreset)
@@ -332,7 +332,7 @@ public class DrumInputManager : MonoBehaviour
     {
         if (!context.performed) return;
 
-        // Debug keyboard key: 3
+        // Debug keyboard key: w
         if (debugMode) Debug.Log("tom 2 rim");
 
         switch (_curPreset)
@@ -366,7 +366,7 @@ public class DrumInputManager : MonoBehaviour
     {
         if (!context.performed) return;
 
-        // Debug keyboard key: 4
+        // Debug keyboard key: e
         if (debugMode) Debug.Log("tom 3 rim");
 
         switch (_curPreset)
