@@ -10,6 +10,7 @@ public class CameraManager : MonoBehaviour
     private CinemachineImpulseSource impulseSource;
     [SerializeField] private List<MoshCam> cams;
     private int camIndex = 0;
+    private int prevCamIndex = 0;
 
     // Serialized noise profiles isnce getting them is a pain otherwise
     [SerializeField] private NoiseSettings handheldShake; // base
@@ -51,6 +52,7 @@ public class CameraManager : MonoBehaviour
         cams[camIndex].vcam.enabled = false;
 
         cams[0].vcam.enabled = true;
+        prevCamIndex = camIndex;
         camIndex = 0;
     }
 
@@ -76,6 +78,7 @@ public class CameraManager : MonoBehaviour
         }
 
         cams[r].vcam.enabled = true;
+        prevCamIndex = camIndex;
         camIndex = r;
     }
 
@@ -92,8 +95,24 @@ public class CameraManager : MonoBehaviour
         cams[camIndex].ResetCam();
         cams[camIndex].vcam.enabled = false;
 
+        prevCamIndex = camIndex;
         camIndex = camIndex + 1 >= cams.Count ? 0 : camIndex + 1;
         cams[camIndex].vcam.enabled = true; 
+    }
+
+    public void CutToPrevious()
+    {
+        if (prevCamIndex == camIndex) return;
+        
+        camBrain.m_DefaultBlend = jumpCutBlend;
+
+        cams[camIndex].ResetCam();
+        cams[camIndex].vcam.enabled = false;
+
+        cams[prevCamIndex].vcam.enabled = true;
+        int temp = prevCamIndex;
+        prevCamIndex = camIndex;
+        camIndex = temp;
     }
 
     public void ToggleFisheye()

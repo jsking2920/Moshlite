@@ -47,7 +47,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
-                _characterManager.RandomSmallDance();
+                _characterManager.RandomMosh();
                 break;
             case Preset.breakdown:
                 break;
@@ -64,7 +64,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
-                _characterManager.RandomMosh();
+                _characterManager.Jump();
                 break;
             case Preset.breakdown:
                 break;
@@ -98,7 +98,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
-                _characterManager.MoshTowardsCenter();
+                _characterManager.RandomMosh();
                 break;
             case Preset.breakdown:
                 break;
@@ -132,7 +132,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
-                _characterManager.BangHeads();
+                _characterManager.MoshTowardsCenter();
                 break;
             case Preset.breakdown:
                 break;
@@ -149,7 +149,9 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
-                _characterManager.PulseScale();
+                _vfxManager.OnReset();
+                _characterManager.OnReset();
+                _cameraManager.OnReset();
                 break;
             case Preset.breakdown:
                 break;
@@ -200,7 +202,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
-                _characterManager.Jump();
+                _lightingManager.FlickerEffect();
                 break;
             case Preset.breakdown:
                 break;
@@ -217,7 +219,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
-                _characterManager.RandomMosh();
+                _lightingManager.ToggleLights();
                 break;
             case Preset.breakdown:
                 break;
@@ -268,9 +270,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
-                _vfxManager.OnReset();
-                _characterManager.OnReset();
-                _cameraManager.OnReset();
+                _cameraManager.CutToPrevious();
                 break;
             case Preset.breakdown:
                 break;
@@ -355,7 +355,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
-                _lightingManager.ToggleLights();
+                _characterManager.BangHeads();
                 break;
             case Preset.breakdown:
                 break;
@@ -372,7 +372,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
-                _lightingManager.FlickerEffect();
+                _characterManager.PulseScale();
                 break;
             case Preset.breakdown:
                 break;

@@ -148,9 +148,9 @@ public class BulbHeadController : MonoBehaviour
 
     public void BangHead()
     {
-        head.AddRelativeForce(new Vector3(0.0f, -40.0f, 50.0f), ForceMode.Impulse);
-        chest.AddRelativeForce(new Vector3(0.0f, 0.0f, 35.0f), ForceMode.Impulse);
-        hips.AddRelativeForce(new Vector3(0.0f, 0.0f, -35.0f), ForceMode.Impulse);
+        head.AddRelativeForce(new Vector3(0.0f, -55.0f, 75.0f), ForceMode.Impulse);
+        chest.AddRelativeForce(new Vector3(0.0f, -20.0f, 55.0f), ForceMode.Impulse);
+        hips.AddRelativeForce(new Vector3(0.0f, 20.0f, -45.0f), ForceMode.Impulse);
     }
 
     public void CrowdKill()
