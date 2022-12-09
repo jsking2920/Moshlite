@@ -35,7 +35,7 @@ public class MoshCam : MonoBehaviour
         isAnimating = false;
         isFisheyeGoingUp = false;
 
-        vcam.LookAt = null;
+        // vcam.LookAt = null;
         vcam.m_Lens.FieldOfView = defaultFOV;
         noiseModule.m_NoiseProfile = defaultNoiseSetting;
         noiseModule.m_AmplitudeGain = Random.Range(defaultNoiseAmplitude - 0.1f, defaultNoiseAmplitude + 0.1f);

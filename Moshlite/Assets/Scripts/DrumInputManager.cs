@@ -234,9 +234,7 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
-                _vfxManager.OnReset();
-                _characterManager.OnReset();
-                _cameraManager.OnReset();
+                _cameraManager.SwapToRandom(false); // false for ease in/out; true for jump cut
                 break;
             case Preset.breakdown:
                 break;
@@ -270,7 +268,9 @@ public class DrumInputManager : MonoBehaviour
         switch (_curPreset)
         {
             case Preset.main:
-                _cameraManager.SwapToFirst(false); // false for ease in/out; true for jump cut
+                _vfxManager.OnReset();
+                _characterManager.OnReset();
+                _cameraManager.OnReset();
                 break;
             case Preset.breakdown:
                 break;
