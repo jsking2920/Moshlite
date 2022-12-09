@@ -105,4 +105,9 @@ public class CameraManager : MonoBehaviour
     {
         impulseSource.GenerateImpulseWithForce(5.0f); // TODO: figure out how to scale this by velocity of midi note
     }
+
+    public void OnReset()
+    {
+        cams[camIndex].ResetCam();
+    }
 }

@@ -332,6 +332,20 @@ public class BulbHeadController : MonoBehaviour
         }
     }
 
+    public void OnReset()
+    {
+        useGravity = true;
+
+        StopAllCoroutines();
+        flickeringCoroutine = null;
+        flickerAgain = false;
+
+        headRenderer.material = litMat;
+        filamentRenderer.material = litFilamentMat;
+        pointLight.enabled = true;
+        isLit = true;
+    }
+
     private void ToggleLightInternal()
     {
         if (isLit)

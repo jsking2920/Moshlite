@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        InputSystem.onAnyButtonPress.CallOnce(ctrl => { receivedInputThisFrame = true; idleTimer = 0.0f; } ); // Sets a bool whenever it gets any inputs from input system (like midi input)
+        InputSystem.onAnyButtonPress.CallOnce(OnReceivedInput); // Sets a bool whenever it gets any inputs from input system (like midi input)
 
         songSelectionPanel.SetActive(false);
         titlePanel.SetActive(true);
@@ -59,8 +59,10 @@ public class GameManager : MonoBehaviour
         audioSource.clip = null;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
+        // Handle keyboard inputs 
+
         // Close game on escape
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -71,13 +73,14 @@ public class GameManager : MonoBehaviour
         {
             ResetScene();
         }
-
         // Handle idling game
-        if (Input.anyKeyDown)
+        else if (Input.anyKeyDown)
         {
             receivedInputThisFrame = true;
             idleTimer = 0.0f;
         }
+
+        // Handle idling game
         if (curState != GameState.title && !receivedInputThisFrame)
         {
             idleTimer += Time.deltaTime;
@@ -129,9 +132,14 @@ public class GameManager : MonoBehaviour
             // will reset after being idle for 60 seconds (or if someone presses r)
         }
 
-
         // reset input flag
         receivedInputThisFrame = false; 
+    }
+
+    public void OnReceivedInput(InputControl ctrl)
+    {
+        receivedInputThisFrame = true; 
+        idleTimer = 0.0f;
     }
 
     public void btn_PlaySong(int songListIndex)
@@ -184,7 +192,7 @@ public class GameManager : MonoBehaviour
             songTitleText.text = '"' + song.title.ToUpper() + '"';
             songArtistText.text = song.artist;
         }
-        timeText.text = System.DateTime.Now.ToString().Replace("/", ".") + ", FINAL GAMES";
+        timeText.text = System.DateTime.Now.ToString().Replace("/", ".") + ", GAMES PREMIERE";
         songTitlePanel.SetActive(true);
         yield return new WaitForSeconds(4.0f);
 
@@ -206,18 +214,7 @@ public class GameManager : MonoBehaviour
         fadeToBlackImage.color = new Color(0, 0, 0, 1);
         yield return new WaitForSeconds(0.5f);
 
-        // Credits
-        if (song == null)
-        {
-            songTitleText.text = "";
-            songArtistText.text = "";
-        }
-        else
-        {
-            songTitleText.text = '"' + song.title.ToUpper() + '"';
-            songArtistText.text = song.artist;
-        }
-        timeText.text = System.DateTime.Now.ToString() + ", FINAL GAMES";
+        timeText.text = System.DateTime.Now.ToString().Replace("/", ".") + ", GAMES PREMIERE";
         songTitlePanel.SetActive(true);
         yield return new WaitForSeconds(2.0f);
 

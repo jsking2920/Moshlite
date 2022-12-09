@@ -84,4 +84,15 @@ public class vfxManager : MonoBehaviour
     {
         watercolorEffect.enabled = !watercolorEffect.enabled;
     }
+
+    public void OnReset()
+    {
+        watercolorEffect.enabled = false;
+
+        baseVolume.enabled = true;
+        redVolume.enabled = false;
+        wackyVolume.enabled = false;
+        state = VolumeState.normal;
+
+    }
 }

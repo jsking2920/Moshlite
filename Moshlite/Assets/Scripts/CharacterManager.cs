@@ -21,6 +21,9 @@ public class CharacterManager : MonoBehaviour
     private UnityEvent randomSmallDanceEvent = new UnityEvent();
     private UnityEvent flickerEvent = new UnityEvent();
     private UnityEvent toggleLightEvent = new UnityEvent();
+    private UnityEvent resetEvent = new UnityEvent();
+
+    private bool gravityZonesReversed = false;
 
     public Transform upperPitCenter;
     public Transform lowerPitCenter;
@@ -52,6 +55,7 @@ public class CharacterManager : MonoBehaviour
         randomSmallDanceEvent.AddListener(c.RandomSmallDance);
         toggleLightEvent.AddListener(c.ToggleLight);
         flickerEvent.AddListener(c.Flicker);
+        resetEvent.AddListener(c.OnReset);
     }
 
     public void RandomMosh()
@@ -118,6 +122,8 @@ public class CharacterManager : MonoBehaviour
     {
         upwardGravZone.ToggleGravityZone();
         downwardGravZone.ToggleGravityZone();
+
+        gravityZonesReversed = !gravityZonesReversed;
     }
 
     public void Flicker()
@@ -128,5 +134,11 @@ public class CharacterManager : MonoBehaviour
     public void ToggleLights()
     {
         toggleLightEvent.Invoke();
+    }
+
+    public void OnReset()
+    {
+        if (gravityZonesReversed) ReverseGravityZones();
+        resetEvent.Invoke();
     }
 }
