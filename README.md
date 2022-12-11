@@ -1,6 +1,6 @@
 # MOSHLITE
 
-scottking.itch.io/moshlite
+<a>scottking.itch.io/moshlite</a>
 
 ![Screen Shot](Screenshot.png)
 
