@@ -152,6 +152,13 @@ public class GameManager : MonoBehaviour
 
     public void PlaySong(int i)
     {
+        // Songs aren't included in repo so just default to freeplay
+        if (songs[i].clip == null)
+        {
+            PlayFreeplay();
+            return;
+        }
+        
         titlePanel.SetActive(false);
         camTimer = 0.0f;
 

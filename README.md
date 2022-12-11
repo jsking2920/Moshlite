@@ -1,10 +1,51 @@
 # MOSHLITE
 
-Final project for 60-419 at CMU.<br>
+scottking.itch.io/moshlite
 
-Based off of https://github.com/jsking2920/60419-Space<br>
+![Screen Shot](Screenshot.png)
 
-![Screen Shot]()
+MOSHLITE is a visual instrument, an experiment in unique interactions, and a basement show at the end of the world. 
+Developed for 60-419 at CMU taught by Professor Paolo Pedercini and exhibited at Games Premiere 2022.<br>
+
+##Controls
+
+MOSHLITE is configured to be controlled by a Roland TD-25KV electronic drumset but keyboard controls for demonstration and testing are listed below. <br>
+
+Ride: Camera controls
+- Edge (u): cut to random
+- Bow (j): Pan to random
+- Bell (i): cut to previous
+Left Crash: Camera FX
+- Edge (f): Shake cam
+- Bow (d): Toggle fisheye + intense shaking effect
+Right Crash: Lighting FX
+- Edge (t): Toggle lights on/off
+- Bow (y): Light flickering effect
+Hi-hat: Moshing
+- Open edge (c): Dancing
+- Open Bow (v): Random moshing (jumping, head banging, dancing, etc)
+- Closed bow (x): Mosh towards center of pit 
+- Pedal close (z): Reset visual effects (water color, red, shaky cam, lights off, etc)
+Snare
+- Head (b): Jump
+- Rim (a): Watercolor effect toggle
+Kick (space)
+- Random moshing (jumping, head banging, dancing, etc)
+Tom1: Color PP effects
+- Head (g): Toggle red effect
+- Rim (q): Toggle weird color effect
+Tom2: Gravity effects
+- Head (h): Gravity singularity effect
+- Rim (w): Toggle gravity on and off
+Tom3: Various effects
+- Head (n): Bang heads
+- Rim (e): Scale pulse effect
+
+Keyboard
+- R: reset scene
+- Esc: exit application
+- LMB: start from title screen
+
 
 ## Attributions:
 - "Minis" unity package <br>
