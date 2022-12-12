@@ -1,6 +1,6 @@
 # MOSHLITE
 
-[itch page](https://scottking.itch.io/moshlite)
+[itch page](https://scottking.itch.io/moshlite) | [Video Demo](https://www.youtube.com/watch?v=5QJILzihTsI) | [Games Premiere Footage](https://www.youtube.com/watch?v=tIdphc5RVjk)
 
 ![Screen Shot](Screenshot.png)
 
